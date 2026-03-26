@@ -1,4 +1,4 @@
 [[redirects]]
 from = "/*"
-to = "/pc/signUp_terms_chk.html"
+to = "index.html"
 status = 200
