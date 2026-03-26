@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "/pc/signUp_terms_chk.html"
+status = 200
