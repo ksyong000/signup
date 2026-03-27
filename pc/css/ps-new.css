@@ -4122,7 +4122,7 @@ body {
 .verification .sign_up-box {
   width: 560px;
   margin: auto;
-  padding: 1rem 0.9375rem;
+  padding: 1rem 0rem;
   box-sizing: border-box;
 }
 
