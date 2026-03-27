@@ -4609,7 +4609,7 @@ body {
 .signUp_complete_box p.notice-1 strong{font-weight:700;color:var(--color-90);}
 .signUp_complete_box p.notice-2{font-size:14px;font-weight:400;color:var(--color-70);margin-top:16px;}
 
-.signUp_benefit_box{display:flex;flex-direction:column;gap:16px;margin-top:40px;border-top:1px solid var(--color-30);}
+.signUp_benefit_box{display:flex;flex-direction:column;gap:16px;margin-top:40px;border-top:1px solid var(--color-90);}
 .signUp_benefit_box .signUp_benefit_item{display:flex;flex-wrap:wrap;justify-content:flex-end;}
 .signUp_benefit_box .signUp_benefit_item p{text-align:right;flex:1;border-bottom:1px solid var(--color-30);line-height:32px;font-size:14px;}
 .signUp_benefit_box .signUp_benefit_item p.last{flex:0 0 calc(100% - 200px)}
