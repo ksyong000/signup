@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!--css-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://image.prospecs.com/mobile/ux/css/renewal/fonts.css?20260329212"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://image.prospecs.com/mobile/ux/css/renewal/reset.css?20260329212"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://image.prospecs.com/mobile/ux/css/renewal/jquery-ui.min.css?20260329212"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://image.prospecs.com/mobile/ux/css/renewal/style.css?20260329212"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://image.prospecs.com/mobile/ux/css/renewal/custom.css?20260329212"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://image.prospecs.com/mobile/ux/css/renewal/belt_mob.css?20260329212"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://image.prospecs.com/mobile/ux/css/renewal/mo.css?20260329212"
+    />
+    <link
+      rel="stylesheet"
+      href="https://image.prospecs.com/files/swiper/package_12.0.3/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/ps-new.css" />
+
+    <!--js-->
+    <script
+      type="text/javascript"
+      src="https://image.prospecs.com/mobile/ux/js/lib/jquery.lib.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://image.prospecs.com/mobile/ux/js/lib/jquery.history.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://image.prospecs.com/mobile/ux/js/renewal/libs/aos.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://image.prospecs.com/mobile/ux/js/renewal/common.js?20260329212"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://image.prospecs.com/mobile/ux/js/renewal/ps_script_mo.js?20260329212"
+    ></script>
+    <script src="https://image.prospecs.com/files/swiper/package_12.0.3/swiper-bundle.min.js"></script>
+  </head>
+
+  <body class="topSlideY">
+    <div id="psWrap" class="ps-wrap ps-new sub">
+      <script type="text/javascript">
+        $(function () {
+          var swiper = new Swiper(".top-txt-banner", {
+            direction: "vertical",
+            loop: true,
+            autoplay: { delay: 3000 },
+          });
+        });
+        function jfTopBBClose() {
+          var params = new Object();
+          params.WM_GB = "W";
+          $.post(
+            "/common.do?cmd=setTopBBDisYnAjax",
+            $.param(params),
+            function (result) {},
+            "text"
+          );
+          document.querySelector(".top-txt-banner").classList.toggle("hide");
+          document
+            .querySelector("body")
+            .classList.remove("topSlideY"); /* 배너숨김 시 여백 변경 20260226 */
+        }
+      </script>
+
+      <style>
+        header {
+          transition: all 0.2s ease-in-out;
+        }
+      </style>
+      <!-- header -->
+      <header>
+        <div class="swiper top-txt-banner topAreaSwiper">
+          <!-- 기존 코드 적용을 위해 클래스 추가 topAreaSwiper 20260226 -->
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide"
+              style="
+                background: #000000;
+                color: #fff;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+              "
+            >
+              <p>
+                <a
+                  href="https://www.prospecs.com/callcenter.do?cmd=getNoticeDetail&NOTICE_SQ=460&CURRENT_PAGE=1"
+                  >[EVENT] 서하마 참가권 추첨 이벤트 당첨자 문자 발송 안내</a
+                >
+              </p>
+              <button class="close-btn" onclick="jfTopBBClose();"></button>
+            </div>
+
+            <div
+              class="swiper-slide"
+              style="
+                background: #000000;
+                color: #fff;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+              "
+            >
+              <p>
+                <a href="/display.do?cmd=appDown"
+                  >APP 다운로드 시 3,000포인트 증정</a
+                >
+              </p>
+              <button class="close-btn" onclick="jfTopBBClose();"></button>
+            </div>
+
+            <div
+              class="swiper-slide"
+              style="
+                background: #000000;
+                color: #fff;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+              "
+            >
+              <p>
+                <a href="http://pf.kakao.com/_Nxnhxbd"
+                  >카카오톡 채널 친구 추가 시 5,000원 쿠폰 증정</a
+                >
+              </p>
+              <button class="close-btn" onclick="jfTopBBClose();"></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gnb-area">
+          <div class="logo">
+            <a href="/">
+              <div class="logo-img"></div>
+            </a>
+          </div>
+          <ul class="right-menus">
+            <li>
+              <button
+                class="search-btn"
+                data-open-layer="commonSearch"
+                id="search"
+                onclick="jfGnbSearch();"
+              ></button>
+            </li>
+            <li class="has-cart hide-indicator">
+              <button onclick="cfGoToPage(_PAGE_CART_LIST);">CART</button>
+            </li>
+            <li>
+              <button class="menu-btn" id="sideMenuClose">MENU</button>
+            </li>
+          </ul>
+          <input type="hidden" id="cart-cnt" value="0" />
+        </div>
+        <aside>
+          <div class="logout-area">
+            <p class="top-message">
+              <a
+                class="login-page-btn underline"
+                href="javascript:void('0');"
+                onclick="cfGoToPage(_PAGE_LOGIN); return false;"
+                >로그인</a
+              >하시고,<br />다양한 혜택을 만나보세요!
+            </p>
+            <div class="btn-wrap2">
+              <button
+                class="membership-btn popup-btn"
+                data-popup="membership-logout"
+              >
+                멤버십카드
+              </button>
+              <button
+                class="mypage-btn"
+                onclick="cfGoToPage(_PAGE_MEMBER_SIGNUP); return false;"
+              >
+                회원가입
+              </button>
+            </div>
+          </div>
+
+          <ul class="category-menus">
+            <li class="toggle">
+              <a href="javascript:void('0');" onclick=""> RUNNING </a>
+              <ul class="sub-menus">
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(1100,2,'','',''); return false;"
+                    rel="nosublink"
+                    >신발</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(1200,2,'','',''); return false;"
+                    rel="nosublink"
+                    >의류</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(1300,2,'','',''); return false;"
+                    rel="nosublink"
+                    >액세서리</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="toggle">
+              <a href="javascript:void('0');" onclick=""> SPORTS STYLE </a>
+              <ul class="sub-menus">
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(2100,2,'','',''); return false;"
+                    rel="nosublink"
+                    >신발</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(2200,2,'','',''); return false;"
+                    rel="nosublink"
+                    >의류</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(2300,2,'','',''); return false;"
+                    rel="nosublink"
+                    >액세서리</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="toggle">
+              <a href="javascript:void('0');" onclick=""> HERITAGE </a>
+              <ul class="sub-menus">
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(3100,2,'','',''); return false;"
+                    rel="nosublink"
+                    >마라톤 110 파리</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(3200,2,'','',''); return false;"
+                    rel="nosublink"
+                    >마라톤 110</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(3300,2,'','',''); return false;"
+                    rel="nosublink"
+                    >마라톤 220</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(3400,2,'','',''); return false;"
+                    rel="nosublink"
+                    >그랜드 슬램 82</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="toggle">
+              <a href="javascript:void('0');" onclick=""> SPORTS </a>
+              <ul class="sub-menus">
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(5100,2,'','',''); return false;"
+                    rel="nosublink"
+                    >야구</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(5200,2,'','',''); return false;"
+                    rel="nosublink"
+                    >축구</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(5300,2,'','',''); return false;"
+                    rel="nosublink"
+                    >농구</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfCategoryItmKinds(5400,2,'','',''); return false;"
+                    rel="nosublink"
+                    >기타</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a
+                href="javascript:void('0');"
+                onclick="cfGoToPage(_PAGE_SMART_FIT); return false;"
+              >
+                ONE SPEC
+              </a>
+            </li>
+
+            <li class="toggle">
+              <a href="javascript:void('0');" onclick=""> OUR STORY </a>
+              <ul class="sub-menus">
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfGoToPage('/product.do?cmd=getSponsorship',''); return false;"
+                    rel="nosublink"
+                    >공식 후원</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfGoToPage('/display.do?cmd=getAboutProspecs&amp;contents=First',''); return false;"
+                    rel="nosublink"
+                    >브랜드 선언</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfGoToPage('/display.do?cmd=getAboutProspecs&amp;contents=Second',''); return false;"
+                    rel="nosublink"
+                    >시즌 컬렉션</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfGoToPage('/display.do?cmd=getAboutProspecs&amp;contents=Third',''); return false;"
+                    rel="nosublink"
+                    >브랜드 가이드</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="javascript:;"
+                    onclick="cfGoToPage('/planning.do?cmd=planningMain&amp;ITHR_CD=PM_001',''); return false;"
+                    rel="nosublink"
+                    >이벤트</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="bot-links">
+            <li>
+              <a
+                href="javascript:;"
+                class="font-kor"
+                onclick="cfGoToPage(_PAGE_NOTICE); return false;"
+                >공지사항</a
+              >
+            </li>
+            <li>
+              <a
+                href="javascript:;"
+                class="font-kor"
+                onclick="cfGoToPage(_PAGE_STORE_INFO); return false;"
+                >매장안내</a
+              >
+            </li>
+          </ul>
+        </aside>
+        <!-- 멤버쉽카드 -->
+        <div class="popup-dim">
+          <div class="popup bot-sheet-popup" id="membership-login-popup">
+            <button class="popup-close-btn"></button>
+            <p class="title">
+              <span class="font-bold" id="membershipNm"></span>님<br />
+            </p>
+            <p class="point-txt">
+              <span class="font-bold" id="membershipLpoint"></span> P
+            </p>
+            <div class="barcode-area">
+              <div
+                class="barcode-img"
+                style="
+                  width: 100%;
+                  max-width: 400px;
+                  height: 150px;
+                  background-color: lightgray;
+                "
+              >
+                <canvas id="barcode" style="width: 100%; height: 100%"></canvas>
+              </div>
+              <p class="barcode-txt" id="membershipNo"></p>
+            </div>
+          </div>
+          <div class="popup bot-sheet-popup" id="membership-logout-popup">
+            <button class="popup-close-btn"></button>
+            <p class="title">로그인이 필요한 서비스입니다.</p>
+            <p class="subtitle">멤버십 카드를 확인하시려면 로그인해주세요.</p>
+            <div class="btn-wrap">
+              <button onclick="cfGoToPage(_PAGE_LOGIN); return false;">
+                로그인
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 검색 -->
+        <form
+          name="gnbSearchForm"
+          method="post"
+          action="/display.do"
+          onsubmit="return jfSearchProductByGnb(document.gnbSearchForm.qt.value);"
+        >
+          <div class="ps-layer-full search" data-layer-target="commonSearch">
+            <div class="ps-layer-full--content">
+              <!-- 검색팝업 변경 20240724 -->
+              <div class="ps-common-search ps-search-wrap">
+                <i class="icon search-gray"></i>
+                <div class="ps-input">
+                  <input
+                    id="qt"
+                    name="qt"
+                    class="inp search-input"
+                    type="text"
+                    value=""
+                    placeholder="검색어를 입력해주세요."
+                    onfocus="this.setAttribute('data-focus','focus');"
+                    data-focus="focus"
+                    onkeypress="if(window.event.keyCode==13){jfSearchEvent();}"
+                  />
+                  <input type="hidden" name="cmd" value="getProductSearch" />
+                  <input type="hidden" name="from" value="gnb" />
+                  <input type="hidden" id="adUrl" value="" />
+                  <button
+                    type="reset"
+                    value="reset"
+                    class="ps-btn icon close search-clear"
+                  >
+                    검색어초기화
+                  </button>
+                </div>
+                <button
+                  type="button"
+                  class="ps-btn search-btn"
+                  data-close-layer="commonSearch"
+                >
+                  <span>취소</span>
+                </button>
+                <script>
+                  $(".search-input").on("input", function () {
+                    if ($(this).val().trim().length > 0) {
+                      $(".search-clear").fadeIn(100);
+                    } else {
+                      $(".search-clear").hide();
+                    }
+                  });
+                  $(".search-clear").click(function () {
+                    $(this).hide();
+                  });
+                </script>
+              </div>
+              <!--// 검색팝업 변경 20240724 -->
+              <div class="ps-common-recommend">
+                <dl class="ps-common-recommend--list">
+                  <dt>추천 검색어</dt>
+                  <!-- 클래스삭제 20240724-->
+                  <dd>
+                    <ul
+                      id="search-recommend-ul"
+                      class="ps-search-recommend flex-auto"
+                    ></ul>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- 검색 -->
+        <!--// GNB -->
+      </header>
+      <script type="text/javascript">
+        let _search_flag_header = false;
+        //gnb레이아웃 수정 20260209[s]
+        function initLayout() {
+          const $header = $("header");
+          let headerHeight = $header.outerHeight() || 0;
+          let prevScroll = window.scrollY;
+          let currentHeaderTop = 0;
+          let ticking = false;
+          const onScroll = () => {
+            const scrollTop = Math.max(0, window.scrollY);
+            const scrollDelta = scrollTop - prevScroll;
+            // 스크롤 방향에 따라 top 값 계산 (Sticky/Fixed 기준)
+            currentHeaderTop = Math.max(
+              -headerHeight,
+              Math.min(0, currentHeaderTop - scrollDelta)
+            );
+            const headerCss = {
+              top: currentHeaderTop + "px",
+              transition: "top 0.25s cubic-bezier(0.4,0,0.2,1)",
+            };
+            $header.css(headerCss);
+            // 메뉴도 따라가게 수정
+            const $subGnb = $(".ps-sub-gnbWrap");
+            if ($subGnb.length) {
+              $subGnb.css({
+                top: currentHeaderTop + headerHeight + "px",
+                transition: "top 0.25s cubic-bezier(0.4,0,0.2,1)",
+              });
+            }
+            prevScroll = scrollTop;
+            ticking = false;
+          };
+          $header.find(".top-txt-banner .close-btn").click(() => {
+            headerHeight -= $header.find(".top-txt-banner").outerHeight();
+            onScroll();
+            $(".top-txt-banner").addClass("hide");
+          });
+          // 스크롤 이벤트 (rAF 적용)
+          window.addEventListener("scroll", () => {
+            if (!ticking) {
+              window.requestAnimationFrame(onScroll);
+              ticking = true;
+            }
+          });
+
+          document
+            .querySelector("header .menu-btn")
+            .addEventListener("click", function () {
+              //2026 삭제 $('#sideMenuClose').text($('#sideMenuClose').text()=="MENU"?"CLOSE":"MENU");
+              document.querySelector("body").classList.toggle("show-aside");
+              // GNB열면 화면잠금 20260306
+              if (document.body.classList.contains("show-aside")) {
+                document.querySelector("html").style.overflow = "hidden";
+              } else {
+                document.querySelector("html").style.overflow = "";
+              }
+            });
+
+          const liList = document.querySelectorAll("aside .category-menus li");
+          liList.forEach((el, index) => {
+            const subMenus = el.querySelector(".sub-menus");
+            if (subMenus) {
+              el.classList.add("toggle");
+
+              el.children[0].addEventListener("click", function () {
+                el.classList.toggle("toggle-open");
+                if (el.classList.contains("toggle-open")) {
+                  const aside = document.querySelector(".show-aside aside");
+                  if (aside) {
+                    const topMenuList = aside.querySelector(".top-menu-list");
+                    const menuListHeight = topMenuList
+                      ? topMenuList.offsetHeight + 50
+                      : 0;
+                    const isLastLi = !el.nextElementSibling;
+                    aside.scrollTo({
+                      top: isLastLi ? aside.scrollHeight : menuListHeight,
+                      behavior: "smooth",
+                    });
+                  }
+                }
+              });
+            }
+          });
+        }
+
+        $(function () {
+          initLayout();
+        });
+
+        //장바구니 상품 개수 조회 후처리
+        function processAfterGetCartProductTotalCount(result) {
+          $("#cart-cnt-effect").text(
+            result.CART_PROD_CNT > 0 ? result.CART_PROD_CNT : 0
+          );
+        }
+
+        // 로그아웃 처리
+        function jfLogout() {
+          var actionUrl = "https://adm.prospecs.com/member.do?cmd=logoutAjax";
+
+          $.post(
+            actionUrl,
+            null,
+            function (result) {
+              // Logout 후처리 함수 호출
+              jfProcessAfterLogout(result);
+            },
+            "jsonp"
+          );
+        }
+
+        // Logout 후 처리
+        function jfProcessAfterLogout(result) {
+          // 메시지가 있으면
+          if (!ngjfIsNull(result.RESULT_MESSAGE)) alert(result.RESULT_MESSAGE);
+
+          // 로그아웃 후 메인으로 이동
+          cfGoToPage(_PAGE_MAIN);
+        }
+
+        function jfSearchEvent() {
+          jfSearchProductByGnb($("#qt").val());
+        }
+
+        function jfSearchProductByGnbBest(searchKeyword) {
+          $("#adUrl").val("");
+          jfSearchProductByGnb(searchKeyword);
+        }
+
+        function jfSearchProductByGnb(searchKeyword) {
+          // 기본 이벤트 실행 안 되게
+          try {
+            if (event.preventDefault) event.preventDefault();
+            else event.returnValue = false;
+          } catch (e) {
+            // alert(e);
+          }
+
+          if (ngjfIsNull(searchKeyword)) {
+            //alert("검색어를 입력해 주세요.");
+            //$('#TOP_SEARCH_KEYWORD').focus();
+            //return false;
+            searchKeyword = "";
+          }
+
+          var osStr = ",원스펙,onespec,원스팩,";
+          var searchKeyword2 =
+            "," + searchKeyword.trim().replace(/\s+/g, "").toLowerCase() + ",";
+          if (osStr.indexOf(searchKeyword2) != -1) {
+            cfGoToPage("/display.do?cmd=getOneSpec");
+            return;
+          }
+
+          if (_search_flag_header) {
+            //alert("검색중..");
+            return false;
+          }
+          _search_flag_header = true;
+
+          // 광고텍스트 링크로 이동
+          if ("" != $("#adUrl").val().trim()) {
+            location.href = $("#adUrl").val();
+            return;
+          }
+
+          // 페이스북 픽셀
+          fbq("track", "Search", {
+            content_ids: "",
+            content_type: "",
+            contents: [{}],
+            currency: "KRW",
+            search_string: searchKeyword,
+            value: 0,
+          });
+
+          var _PAGE_PRODUCT_SEARCH =
+            "/display.do?cmd=categoryMain&GNB_ID=search";
+          var actionUrl =
+            _PAGE_PRODUCT_SEARCH +
+            "&qt=" +
+            encodeURIComponent(searchKeyword.replaceAll("^|^", "'"));
+          cfGoToPage(actionUrl);
+        }
+        $("input[type=text]").bind("keydown", function (e) {
+          if (e.keyCode === 13) {
+            if (_search_flag) {
+              //alert("검색중..");
+              return false;
+            }
+            _search_flag = true;
+          }
+        });
+
+        // 로그아웃 처리
+        function jfGuestMemberLogout() {
+          var actionUrl = "https://adm.prospecs.com/member.do?cmd=logoutAjax";
+
+          $.post(
+            actionUrl,
+            null,
+            function (result) {
+              // Logout 후처리 함수 호출
+              jfProcessGuestAfterLogout(result);
+            },
+            "jsonp"
+          );
+        }
+
+        // Logout 후 처리
+        function jfProcessGuestAfterLogout(result) {
+          // 로그아웃 후 회원가입으로 이동
+          cfGoToPage(_PAGE_MEMBER_SIGNUP);
+        }
+
+        function jfRemoveSearchTxt() {
+          $("input[name=qt]").val("");
+          $("#adUrl").val("");
+        }
+
+        var gnbScMap = "";
+        function jfSearchProductByGnbBest2(obj) {
+          $("#adUrl").val("");
+          jfSearchProductByGnb(obj.id.replace("gbLi_", ""));
+        }
+        function jfGnbSearch() {
+          if (null == gnbScMap || "" == gnbScMap) {
+            $.post(
+              "/common.do?cmd=getSearchGnbInfo",
+              null,
+              function (result) {
+                gnbScMap = result.popularKeyword;
+                if (null != gnbScMap && gnbScMap.length > 0) {
+                  var codeHtm = "";
+                  for (var a = 0; a < gnbScMap.length; a++) {
+                    codeHtm +=
+                      "<li><a href=javascript:; id='gbLi_" +
+                      gnbScMap[a].CODE_NM +
+                      "' onclick=jfSearchProductByGnbBest2(this); return false; class=line-clamp-1 >" +
+                      gnbScMap[a].CODE_NM +
+                      "</a></li>";
+                  }
+                  $("#search-recommend-ul").append(codeHtm);
+                }
+              },
+              "json"
+            );
+          }
+        }
+
+        //멤버쉽카드 호출
+        function initMemCardPopup() {
+          $(".popup-btn").on("click", function () {
+            const popupId = "#" + $(this).data("popup") + "-popup";
+            if (popupId == "#membership-login-popup") {
+              $.ajax({
+                url: "/member.do?cmd=getMembershipCardInfo",
+                type: "post",
+                data: _sessCustId,
+                dataType: "json",
+                crossDomain: true,
+                success: function (result) {
+                  if (result.membershipCardinfo.INTEG_MEM_YN == "N") {
+                    alert("통합 회원만 조회 가능합니다.");
+                    return false;
+                  } else {
+                    $("#membershipNm").append(result.membershipCardinfo.MEM_NM);
+                    $("#membershipLpoint").append(result.Lpoint);
+                    $("#membershipNo").append(
+                      result.membershipCardinfo.MEM_CARD_NO.substring(0, 4) +
+                        " " +
+                        result.membershipCardinfo.MEM_CARD_NO.substring(4, 8) +
+                        " " +
+                        result.membershipCardinfo.MEM_CARD_NO.substring(8, 12) +
+                        " " +
+                        result.membershipCardinfo.MEM_CARD_NO.substring(12, 16)
+                    );
+                    makeBarcode(result.membershipCardinfo.MEM_CARD_NO);
+                    $(".popup").hide();
+                    $(popupId).show();
+                    $(popupId).parent().fadeIn();
+                  }
+                },
+                error: function (xhr, status, error) {
+                  alert("에러발생");
+                },
+              });
+            } else {
+              $(".popup").hide();
+              $(popupId).show();
+              $(popupId).parent().fadeIn();
+            }
+          });
+          $(".popup .popup-close-btn").on("click", function () {
+            $(this).closest(".popup-dim").fadeOut();
+            closeMemCardGnb();
+          });
+          $(".popup-dim").click(function (e) {
+            if (!$(e.target).closest(".popup").length) {
+              $(this).fadeOut();
+              closeMemCardGnb();
+            }
+          });
+        }
+
+        initMemCardPopup();
+        //멤버쉽카드 종료시
+        function closeMemCardGnb() {
+          setTimeout(function () {
+            $("#membershipNm").empty();
+            $("#membershipLpoint").empty();
+            $("#membershipNo").empty();
+            $("#barcode").empty();
+          }, 500);
+        }
+
+        function makeBarcode(MEM_CARD_NO) {
+          let canvas2 = bwipjs.toCanvas("barcode", {
+            bcid: "code128",
+            text: MEM_CARD_NO,
+            scale: 10, // 코드 넓이
+            height: 10, // 코드 높이 millimeters
+            includetext: false, // 코드 텍스트 포함
+            //, textFont : "Times-Roman"
+            //, alttext : "PRO-SPECS" // 코드 텍스트 내용. *한글미지원
+            textxalign: "center", // 텍스트 정렬 (기본: 중앙)
+            rotate: "N", // 코드 돌리기 (N:일반, R-오른쪽세로, L-왼쪽세로, I-위아래반전)
+            backgroundcolor: "#eeeeee", // 뒷배경색(투명도 적용 불가)
+            // , textcolor: '#19531b'	//	텍스트색(투명도 적용 불가)
+            barcolor: "#000000", // 바코드색(투명도 적용 불가)
+          });
+        }
+        $(document).ready(function () {
+          // 장바구니에 담긴 상품수 조회
+          cfGetCartProductTotalCount();
+          //로그인시
+          if (false) {
+            // 비밀번호 변경 시기(비밀번호변경 후 6개월 경과)가 도래한 경우
+            // 그리고 비밀번호변경팝업레이어를 30일간 보지않기 체크하지 않은 경우
+            if ("N" == "Y") {
+              cfOpenPasswordChangeLayer();
+            }
+            //임직원 인증레이처 처리
+            if ("N" == "Y") {
+              cfFamilyConfirmLayer();
+            }
+            //휴면회원 해제처리후 안내레이어
+            if (cfGetCookie("CK10W_IS_DORMANCY_SUCC") == "Y") {
+              cfDormancyClearLayer();
+            }
+          }
+        });
+      </script>
+      <!--//header -->
+      <!--contents[s]-->
+      <main>
+        <div class="ps-inner">
+          <!--회원가입 약관동의[s]-->
+          <div class="signUp_wrap">
+            <h2>회원정보 수정</h2>
+
+            <form>
+              <div class="signUp_form_wrap edit_form">
+                <!--이메일[s]-->
+                <div class="signUp_form_item">
+                  <h5 class="required"><span>이메일</span></h5>
+                  <div class="signUp_form_item_box">
+                    <div class="signUp_form_item_input">
+                      <input
+                        type="hidden"
+                        name="EMAIL_EMPLOYEE_YN"
+                        id="EMAIL_EMPLOYEE_YN"
+                        value="Y"
+                      />
+                      <input
+                        type="text"
+                        class="inp"
+                        name="EMAIL1"
+                        id="EMAIL1"
+                        placeholder=""
+                        value="example@prospecs.com"
+                        readonly
+                        data-gtm-form-interact-field-id="0"
+                      />
+                    </div>
+                  </div>
+                  <ul class="ps-list type6">
+                    <li>
+                      <div class="ps-chkbox">
+                        <label for="EMAIL_YN1">
+                          <input
+                            type="radio"
+                            name="T_EMAIL_YN"
+                            id="EMAIL_YN1"
+                            value="Y"
+                            onchange="jfCheckEmail();"
+                          />
+                          <span class="text">이메일 수신동의</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="ps-chkbox">
+                        <label for="EMAIL_YN2">
+                          <input
+                            type="radio"
+                            name="T_EMAIL_YN"
+                            id="EMAIL_YN2"
+                            value="N"
+                            onchange="jfCheckEmail();"
+                          />
+                          <span class="text">이메일 수신거부</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="btn-tip">
+                      <span class="ps-btn question">
+                        <i class="icon question"></i>
+                      </span>
+                      <div class="tip-box">
+                        이메일 수신에 동의하실 경우 프로스펙스닷컴의 다양한
+                        혜택과 세일정보를 안내받을 수 있습니다.
+                        <br />
+                        정보성 및 주문/배송 안내 내용은 수신동의 여부와 관계없이
+                        발송됩니다.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!--이메일[e]-->
+                <!--현재비밀번호[s]-->
+                <div class="signUp_form_item">
+                  <h5 class="required"><span>현재 비밀번호</span></h5>
+                  <div class="signUp_form_item_box">
+                    <div class="signUp_form_item_input">
+                      <input type="hidden" name="SPASSWD" id="SPASSWD" />
+                      <input
+                        type="password"
+                        class="inp"
+                        placeholder="영문+숫자, 혹은 영문+특수문자 등 비밀번호를 조합하여 입력해 주세요."
+                        id="PASSWD"
+                        onkeyup="jfCheckPasswordLevel();"
+                        onblur="jfCheckPasswordLevel();"
+                        data-gtm-form-interact-field-id="1"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--현재비밀번호[e]-->
+                <!--신규 비밀번호[s]-->
+                <div class="signUp_form_item">
+                  <h5 class="required"><span>신규 비밀번호</span></h5>
+                  <div class="signUp_form_item_box">
+                    <div class="signUp_form_item_input">
+                      <input type="hidden" name="SPASSWD" id="SPASSWD" />
+                      <input
+                        type="password"
+                        class="inp"
+                        placeholder="영문+숫자, 혹은 영문+특수문자 등 비밀번호를 조합하여 입력해 주세요."
+                        id="PASSWD"
+                        onkeyup="jfCheckPasswordLevel();"
+                        onblur="jfCheckPasswordLevel();"
+                        data-gtm-form-interact-field-id="1"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--신규 비밀번호[e]-->
+                <!--신규 비밀번호 확인[s]-->
+                <div class="signUp_form_item">
+                  <h5 class="required"><span>신규 비밀번호 확인</span></h5>
+                  <div class="signUp_form_item_box">
+                    <div class="signUp_form_item_input">
+                      <input
+                        type="password"
+                        class="inp"
+                        placeholder="비밀번호를 다시 입력해주세요."
+                        id="PASSWD_CONFIRM"
+                        onkeyup="jfCheckPasswordLevel();"
+                        onblur="jfCheckPasswordLevel();"
+                      />
+                    </div>
+                  </div>
+                  <p class="errorMessage">비밀번호가 일치하지 않습니다.</p>
+                </div>
+                <!--신규 비밀번호 확인[e]-->
+                <!--이름[s]-->
+                <div class="signUp_form_item">
+                  <h5><span>이름</span></h5>
+                  <div class="signUp_form_item_box">
+                    <div class="signUp_form_item_input">
+                      <input
+                        type="text"
+                        readonly=""
+                        class="inp"
+                        maxlength="20"
+                        onblur="jfCheckName();"
+                        onclick="setMessage()"
+                        value="홍길동"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--이름[e]-->
+                <!--휴대폰번호[s]-->
+                <div class="signUp_form_item">
+                  <h5><span>휴대폰번호</span></h5>
+                  <div class="signUp_form_item_box">
+                    <div class="signUp_form_item_input">
+                      <input
+                        type="text"
+                        readonly=""
+                        class="inp"
+                        numberonly="true"
+                        onclick="setMessage();"
+                        value="01012345678"
+                      />
+                    </div>
+                    <a
+                      href="javascript:void(0)"
+                      class="ps-btn type4 font-bold black"
+                      onclick="jfCheckSave();"
+                      >휴대폰 인증</a
+                    >
+                  </div>
+                  <ul class="ps-list type6">
+                    <li>
+                      <div class="ps-chkbox">
+                        <label for="SMS_YN1">
+                          <input
+                            type="radio"
+                            name="T_SMS_YN"
+                            id="SMS_YN1"
+                            value="Y"
+                            onchange="jfCommonMobile('SMS');"
+                          />
+                          <span class="text">SMS 수신동의</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="ps-chkbox">
+                        <label for="SMS_YN2">
+                          <input
+                            type="radio"
+                            name="T_SMS_YN"
+                            id="SMS_YN2"
+                            value="N"
+                            onchange="jfCommonMobile('SMS');"
+                          />
+                          <span class="text">SMS 수신거부</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="btn-tip">
+                      <span class="ps-btn question">
+                        <i class="icon question"></i>
+                      </span>
+                      <div class="tip-box">
+                        SMS 수신에 동의하실 경우 프로스펙스닷컴의 다양한 혜택과
+                        세일정보를 안내받을 수 있습니다.
+                        <br />
+                        정보성 및 주문/배송 안내 내용은 수신동의 여부와 관계없이
+                        발송됩니다.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!--휴대폰번호[e]-->
+                <!--생년월일[s]-->
+                <div class="signUp_form_item">
+                  <h5><span>생년월일</span></h5>
+                  <div class="signUp_form_item_box">
+                    <div class="signUp_form_item_input">
+                      <input
+                        type="text"
+                        readonly=""
+                        class="inp"
+                        numberonly="true"
+                        onclick="setMessage();"
+                        value="19990101"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--생년월일[e]-->
+                <!--성별[s]-->
+                <div class="signUp_form_item">
+                  <h5><span>성별</span></h5>
+                  <div class="signUp_form_item_box">
+                    <div class="radio-box etc">
+                      <input type="hidden" />
+                      <div class="ps-chkbox etc">
+                        <label class="check">
+                          <input
+                            type="radio"
+                            name="T_SEX_GB"
+                            id="SEX_GB1"
+                            value="M"
+                            checked=""
+                          />
+                          <span class="text">남자</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--성별[e]-->
+                <!--주소[s]-->
+                <div class="signUp_form_item">
+                  <h5><span>주소</span></h5>
+                  <div class="signUp_form_item_box">
+                    <div class="signUp_form_item_input">
+                      <input
+                        type="text"
+                        class="inp"
+                        name="ADDRESS"
+                        id="ADDRESS1"
+                        placeholder=""
+                        value="서울특별시 중구 을지로 100"
+                        readonly
+                      />
+                    </div>
+                    <a
+                      href="javascript:void(0)"
+                      class="ps-btn type4 font-bold black"
+                      onclick="jfCheckSave();"
+                      >우편번호 찾기</a
+                    >
+                  </div>
+                  <div class="signUp_form_item_box">
+                    <div class="signUp_form_item_input">
+                      <input
+                        type="text"
+                        class="inp"
+                        name="ADDRESS"
+                        id="ADDRESS2"
+                        placeholder=""
+                        value="17층"
+                        readonly
+                      />
+                    </div>
+                    <div class="signUp_form_item_input">
+                      <input
+                        type="text"
+                        class="inp"
+                        name="ADDRESS"
+                        id="ADDRESS3"
+                        placeholder=""
+                        value="LS용산타워"
+                        readonly
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--주소[e]-->
+                <!--오렌지카드[s]-->
+                <div class="join-wrap">
+                  <div class="orange-card-wrap">
+                    <div class="card">
+                      <!-- 인증 전 -->
+                      <div class="txt-wrap" id="e1ReqMsg">
+                        <p>
+                          E1 오렌지카드 멤버십 인증 시,<br />프로-스펙스 상품
+                          할인 및<br />포인트를 사용하실 수 있습니다.<br />(일부
+                          품목 제외)
+                        </p>
+                        <a href="javascript:cfOpenOrangeCardAuthLayer();"
+                          >E1 오렌지카드 인증</a
+                        >
+                      </div>
+                      <!-- 인증 후 -->
+                      <div
+                        class="txt-wrap"
+                        id="e1ResultMsg"
+                        style="display: none"
+                      >
+                        <p>
+                          프로-스펙스 상품 할인 및<br />포인트를 사용하실 수
+                          있습니다.<br />(일부 품목 제외)
+                        </p>
+                        <a href="javascript:cfOpenOrangeCardAuthLayer();"
+                          >E1 오렌지카드 정보 수정</a
+                        >
+                      </div>
+                      <div class="img-wrap">
+                        <img
+                          src="//timage.prospecs.com/mobile/images/renewal/orange_card.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--오렌지카드[e]-->
+              </div>
+            </form>
+            <div class="btn-wrap">
+              <a
+                href="javascript:void(0);"
+                class="ps-btn type10"
+                onclick="jfCheckSave();"
+                >회원 정보 수정하기</a
+              >
+            </div>
+          </div>
+          <!--회원가입 약관동의[e]-->
+        </div>
+      </main>
+      <!--//contents[e]-->
+      <!--footer[s]-->
+      <footer>
+        <div>
+          <p class="contact">
+            구매 / 배송 문의 <a href="tel:080-710-1020">080-710-1020</a><br />
+            상품정보 / AS문의 <a href="tel:080-023-1020">080-023-1020</a>
+          </p>
+          <p class="operation-time">
+            MON - FRI 09:00 ~ 17:00<br />
+            BREAK TIME : 12:30 ~ 13:30 (주말, 공휴일 휴무)
+          </p>
+          <ul class="info-toggle-list">
+            <li>
+              <p class="title bold">(주) LS네트웍스 사업자정보<i></i></p>
+              <div class="content">
+                <p>대표이사: 문성준</p>
+                <p>경상남도 김해시 호계로 428, 1층(부원동)</p>
+                <p>
+                  개인정보관리 책임자 유승호
+                  <a
+                    href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=6228104805"
+                    target="_blank"
+                    class="underline"
+                    >사업자정보확인</a
+                  >
+                </p>
+                <p>통신판매업신고번호 2016-경남김해-0229</p>
+                <p>사업자등록번호 622-81-04805</p>
+                <p>
+                  마케팅/제휴 문의
+                  <a href=" mailto:prospecs.brand@gmail.com" class="underline"
+                    >prospecs.brand@gmail.com</a
+                  >
+                </p>
+              </div>
+            </li>
+            <li>
+              <p class="title bold">SGI 서울보증안내<i></i></p>
+              <div class="content">
+                현금 등으로 결제하신 경우, 안전 거래를 위해 프로스펙스닷컴
+                쇼핑몰에서 가입한 소비자피해보상보험 서비스를 이용하실 수
+                있습니다.
+              </div>
+            </li>
+            <li>
+              <p class="title">SUPPORT<i></i></p>
+              <div class="content">
+                <p>
+                  <a
+                    href="javascript:void(0);"
+                    onclick="cfGoToPage(_PAGE_STORE_INFO,'');"
+                    >매장안내</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="javascript:void(0);"
+                    onclick="cfGoToPage(_PAGE_AS_GUIDE,'');"
+                    >A/S 안내</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="javascript:void(0);"
+                    onclick="cfGoToPage(_PAGE_CALLCENTER,'');"
+                    >고객센터</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="javascript:void(0);"
+                    onclick="cfGoToPage(_PAGE_APP_DOWN,'');"
+                    >APP 다운로드</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="javascript:void(0);"
+                    onclick="cfGoToPage(_PAGE_GIFT_CARD,'');"
+                    >GIFT CARD</a
+                  >
+                </p>
+              </div>
+            </li>
+            <li>
+              <p class="title">INFO<i></i></p>
+              <div class="content">
+                <p>
+                  <a
+                    href="javascript:void(0);"
+                    onclick="cfGoToPage(_PAGE_PRIVACY_POLICY,'');"
+                    >개인정보처리방침</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="javascript:void(0);"
+                    onclick="cfGoToPage(_PAGE_USE_TERMS,'');"
+                    >이용약관</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="javascript:void(0);"
+                    onclick="cfGoToPage(_PAGE_NOTICE,'');"
+                    >공지사항</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="javascript:void(0);"
+                    onclick="cfGoToPage(_PAGE_PROSPECS_NEWS,'');"
+                    >뉴스</a
+                  >
+                </p>
+              </div>
+            </li>
+            <li>
+              <p class="title">SOCIAL<i></i></p>
+              <div class="content">
+                <p>
+                  <a href="https://www.facebook.com/prospecs.kr" target="_blank"
+                    >FACEBOOK</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="https://www.youtube.com/user/ProspecsBrand/"
+                    target="_blank"
+                    >YOUTUBE</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="https://www.instagram.com/prospecs_kr/"
+                    target="_blank"
+                    >INSTAGRAM</a
+                  >
+                </p>
+              </div>
+            </li>
+            <li>
+              <p class="title">FAMILY SITE<i></i></p>
+              <div class="content">
+                <p>
+                  <a href="https://www.montbell.co.kr" target="_blank"
+                    >MONT-BELL</a
+                  >
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            프로스펙스닷컴 | COPYRIGHT© LS NETWORKS CO. ALL RIGHTS RESERVED
+          </p>
+        </div>
+      </footer>
+      <!--//footer[e]-->
+    </div>
+  </body>
+</html>
