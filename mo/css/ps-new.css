@@ -4384,3 +4384,5 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
 .terms-list + h3 {
   margin-top: 76px;
 }
+
+.verification .terms-wrap .ps-chkbox.all-chk{align-items:center;}
