@@ -1644,6 +1644,89 @@
                   </div>
                 </div>
                 <!--성별[e]-->
+                <!--E1 오렌지카드 인증[s]-->
+                <div class="orange-card-area">
+                  <img
+                    src="//timage.prospecs.com/front/images/renewal/orange-card.png"
+                    alt="orange-card-icon"
+                  />
+                  <!-- 인증전 -->
+                  <span class="text-info" id="e1ReqTxt"
+                    >E1 오렌지카드 멤버십 인증 시, 프로-스펙스 상품 할인 및
+                    포인트를 사용하실 수 있습니다. (일부 품목 제외)</span
+                  >
+                  <a
+                    href="javascript:void(0);"
+                    class="orange-card--cf open-layer"
+                    data-open-layer="e1-popup"
+                    id="e1ReqMsg"
+                    >E1 오렌지카드 인증</a
+                  >
+                  <!-- 인증후 -->
+                  <span class="text-info" id="e1ResultTxt" style="display: none"
+                    >프로-스펙스 상품 할인 및 포인트를 사용하실 수 있습니다.
+                    (일부 품목 제외)</span
+                  >
+                  <span
+                    class="orange-card--cf on"
+                    id="e1ResultMsg"
+                    style="display: none"
+                    ><a
+                      href="javascript:void(0);"
+                      class="orange-card--cf open-layer"
+                      data-open-layer="e1-popup"
+                      id="e1ReqMsg1"
+                      >E1 오렌지카드 정보 수정</a
+                    ></span
+                  >
+                </div>
+                <!--E1 오렌지카드 인증[e]-->
+                <!--카카오연결[s]-->
+                <ul class="sns-list--box">
+                  <li style="display: none">
+                    <img
+                      src="//image.prospecs.com/front/images/renewal/icon_naver.png"
+                      alt="네이버 아이콘"
+                    />
+
+                    <span class="no-info">연결된 정보가 없습니다.</span>
+                    <a
+                      href="javascript:void(0)"
+                      class="ps-btn type4 small-black"
+                      onclick="jfSnsLogin('NV');"
+                      >연결하기</a
+                    >
+                  </li>
+                  <li>
+                    <img
+                      src="//image.prospecs.com/front/images/renewal/icon_kakao.png"
+                      alt="카카오 아이콘"
+                    />
+
+                    <span class="no-info">연결된 정보가 없습니다.</span>
+                    <a
+                      href="javascript:void(0)"
+                      class="ps-btn type4 small-black"
+                      onclick="jfLoginKakaoSync();"
+                      >연결하기</a
+                    >
+                  </li>
+                  <li style="display: none">
+                    <img
+                      src="//image.prospecs.com/front/images/renewal/icon_face.png"
+                      alt="페이스북 아이콘"
+                    />
+
+                    <span class="no-info">연결된 정보가 없습니다.</span>
+                    <a
+                      href="javascript:void(0)"
+                      class="ps-btn type4 small-black"
+                      onclick="cfLoginWithFacebook();"
+                      >연결하기</a
+                    >
+                  </li>
+                </ul>
+                <!--카카오연결[e]-->
               </div>
             </form>
             <div class="w-full ps-btn-wrap">

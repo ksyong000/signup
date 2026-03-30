@@ -4595,6 +4595,8 @@ body {
 .signUp_form_item_box .signUp_form_item_input input::-webkit-placeholder{color:var(--color-50);font-size:16px;}
 
 .signUp_wrap .ps-btn-wrap{margin-top:50px;}
+.signUp_wrap .ps-btn-wrap .ps-btn{height:56px !important;line-height:56px !important}
+.signUp_wrap .ps-btn-wrap .ps-btn:disabled{background:var(--color-10);color:var(--color-50);}
 .signUp_form_item_select .selectric-wrapper .selectric > .label{border-left:none;border-top:none;border-right:none;}
 
 .signUp_form_wrap .orange-card-area{flex-wrap:wrap;}
@@ -4619,3 +4621,8 @@ body {
 .signUp_benefit_box .signUp_benefit_item_detail p{display:flex;justify-content: space-between;border-bottom:1px solid var(--color-30);line-height:32px;font-size:14px;}
 .signUp_benefit_box .signUp_benefit_item_detail p span{font-weight:500;font-size:14px;}
 
+/* 카카오인증 변경 */
+.signUp_wrap .sns-list--box{margin-top:0;}
+.signUp_wrap .sns-list--box > li{padding:20px 10px;}
+.signUp_wrap .sns-list--box > li > img{width:35px;}
+.signUp_wrap .sns-list--box > li > span{margin-left:8px;}

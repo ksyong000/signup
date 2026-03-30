@@ -4068,6 +4068,7 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
   gap: 32px;
   margin-top: 80px;
 }
+
 .signUp_form_wrap.edit_form {
   margin-top: 32px;
 }
@@ -4163,6 +4164,7 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
 .signUp_complete_box h3 {
   font-weight: 600;
   font-size: 26px;
+  line-height: 32px;
   color: var(--color-100);
   text-align: center;
 }
@@ -4190,6 +4192,14 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
   font-weight: 400;
   color: var(--color-70);
   margin-top: 16px;
+}
+.signUp_complete_box .ps-btn {
+  margin-top: 50px;
+}
+.signUp_complete_box .ps-btn:disabled {
+  background: var(--color-10);
+  color: var(--color-50);
+  border: none;
 }
 
 .signUp_benefit_box {
