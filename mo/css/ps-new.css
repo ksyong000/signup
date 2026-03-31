@@ -35,6 +35,12 @@ button {
   align-items: center;
 }
 
+.ps-new .terms-wrap .ps-chkbox>label  {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
 .ps-new .ps-chkbox > label > input[type="checkbox"] + .text {
   color: var(--color-90);
 }
@@ -3871,7 +3877,7 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
 
 /* ?뚯썝媛??낆닔?? 20250714 */
 .verification .terms-wrap .ps-list.type3 li + li {
-  margin-top: 14px;
+  margin-top: 8px;
 }
 
 .verification.membership-root {
