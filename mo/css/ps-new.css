@@ -4396,18 +4396,53 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
 
 
 /* 혜택보기 토글 */
-    .signUp_complete_box { text-align: center; padding: 20px 0; }
-    .signUp_complete_box .notice-1.bold { font-size: 18px; font-weight: 600; margin-bottom: 20px; }
-    
-    .signUp_benefit_box { 
-        padding: 15px 0; 
-        border-bottom: 1px solid #eee; /* 깔끔한 구분선 */
-    }
-    .signUp_benefit_box:last-child { border-bottom: none; } /* 마지막 선은 제거 */
-    
-    .signUp_benefit_item span { display: block; font-weight: 600; margin-bottom: 5px; }
-    .signUp_benefit_item p { margin: 2px 0; font-size: 15px; }
+/* 모바일 전용 레이아웃 스타일 */
+.sign_up-box { 
+    width: 100% !important; 
+    padding: 1rem 0 !important; 
+    margin: 0 auto;
+}
 
-    /* 화살표 회전 애니메이션만 유지 */
-    .toggle-arrow { transition: transform 0.3s; }
-    .membership-toggle-area.open .toggle-arrow { transform: rotate(180deg); }
+.signUp_complete_box { 
+    text-align: center; 
+    padding: 15px 5px; 
+}
+
+.signUp_complete_box .notice-1.bold { 
+    font-size: 16px; /* 모바일 가독성 최적화 */
+    font-weight: 600; 
+    margin-bottom: 15px; 
+}
+
+.signUp_benefit_box { 
+    padding: 12px 0; 
+    border-bottom: 1px solid #eee; 
+}
+
+.signUp_benefit_box:last-child { 
+    border-bottom: none; 
+}
+
+.signUp_benefit_item span { 
+    display: block; 
+    font-weight: 600; 
+    font-size: 14px; 
+    margin-bottom: 4px; 
+}
+
+.signUp_benefit_item p { 
+    margin: 1px 0; 
+    font-size: 13px; 
+    line-height: 1.5; 
+    color: #444;
+}
+
+/* 화살표 애니메이션 */
+.toggle-arrow { 
+    transition: transform 0.3s; 
+    width: 10px; /* 모바일에 맞는 화살표 크기 */
+}
+
+.membership-toggle-area.open .toggle-arrow { 
+    transform: rotate(180deg); 
+}
