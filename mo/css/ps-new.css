@@ -4396,45 +4396,101 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
 
 
 /* 혜택보기 토글 */
+/* 전체 박스 */
+.sign_up-box {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+}
 
-    .sign_up-box { width: 100% !important; margin: 0 auto; padding: 1rem 0 !important; }
+/* 토글 카드 */
+.membership-toggle-area {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 16px;
+    background: #fff;
+}
 
-    /* [배너 영역] 요청하신 대로 중앙 정렬 */
-    .membership-banner { text-align: center; padding: 20px 0; }
-    .membership-banner .sub-link { 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        gap: 5px; 
-        margin-top: 8px; 
-        font-weight: bold; 
-    }
+/* 배너 (기존 가로 유지) */
+.membership-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
 
-    /* [혜택 상세 영역] */
-    .signUp_complete_box { padding: 20px 0; text-align: center; }
-    .signUp_complete_box .notice-1.bold { font-size: 18px; font-weight: 600; margin-bottom: 20px; display: block; }
-    
-    .signUp_benefit_box { padding: 12px 0; border-bottom: 1px solid #eee; }
-    .signUp_benefit_box:last-child { border-bottom: none; }
+/* 🔥 텍스트만 가운데 정렬 */
+.banner-text {
+    flex: 1;
+    text-align: center;
+}
 
-    /* 카테고리(제품 할인 등) */
-    .signUp_benefit_item span { 
-        display: block; 
-        font-weight: 600; 
-        margin-bottom: 8px; 
-        font-size: 15px; 
-    }
+.banner-text p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
 
-    /* 상세 내용(신발 40% 등) - 무조건 한 줄에 하나씩 */
-    .signUp_benefit_item p { 
-        display: block; 
-        margin: 4px 0; 
-        font-size: 14px; 
-        line-height: 1.6; 
-        word-break: keep-all; 
-    }
+/* 링크 */
+.sub-link {
+    font-weight: 600;
+    display: flex;
+    justify-content: center; /* 가운데 */
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+    font-size: 13px;
+}
 
-    /* 화살표 애니메이션 */
-    .toggle-arrow { transition: transform 0.3s; width: 12px; }
-    .membership-toggle-area.open .toggle-arrow { transform: rotate(180deg); }
+/* 이미지 (우측 유지) */
+.banner-img img {
+    width: 60px;
+    height: auto;
+}
 
+/* 혜택 영역 */
+.benefit-contents {
+    display: none;
+    margin-top: 16px;
+}
+
+/* 타이틀 */
+.notice-1.bold {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* 혜택 박스 */
+.signUp_benefit_box {
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.signUp_benefit_box:last-child {
+    border-bottom: none;
+}
+
+/* 혜택 텍스트 (❗기존 느낌 유지 + 가독성만 개선) */
+.signUp_benefit_item span {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.signUp_benefit_item p {
+    margin: 2px 0;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* 화살표 */
+.toggle-arrow {
+    width: 14px;
+    transition: transform 0.3s;
+}
+
+.membership-toggle-area.open .toggle-arrow {
+    transform: rotate(180deg);
+}
