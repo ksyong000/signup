@@ -3894,6 +3894,7 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
   text-align: center;
   border-bottom: 1px solid #d8d8d8;
   margin-bottom: 24px;
+  margin-top: 1.5rem;
 }
 
 .sign_up-box > h2 {
