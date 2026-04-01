@@ -1398,33 +1398,53 @@
             </div> 
             <div class="singn_up--terms-ck">
               <!--멤버쉽혜택[s]-->
-              <div class="sign_up-box">
-                <a
-                  href=""
-                  class="membership-banner"
-                  style="text-decoration: none; color: inherit"
-                >
-                  <div class="banner-text">
-                    <p>
-                      우리의 움직임에 함께해 주세요<br />
-                      <span class="sub-link"
-                        >임직원 혜택 보기
-                        <img
-                          src="https://image.prospecs.com/front/ux/css/images/arrow_bk.svg"
-                          alt="→"
-                        />
-                      </span>
-                    </p>
-                  </div>
+<div class="sign_up-box" style="width: 560px !important; padding: 1rem 0 !important;">
+    <div class="membership-toggle-area closed" style="cursor: pointer; border: 1px solid #eee; padding: 15px; border-radius: 10px;">
+        <div class="membership-banner" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="banner-text">
+                <p style="margin: 0; text-align: left;">
+                    우리의 움직임에 함께해 주세요<br>
+                    <span class="sub-link" style="font-weight: bold; display: flex; align-items: center; gap: 5px; margin-top: 5px;">
+                        임직원 혜택 보기
+                        <img src="https://image.prospecs.com/front/ux/css/images/arrow_bk.svg" alt="→" class="toggle-arrow">
+                    </span>
+                </p>
+            </div>
+            <div class="banner-img">
+                <img src="https://image.prospecs.com/front/ux/css/images/membership_logo_bk.svg" alt="프로스펙스 포인트 이미지">
+            </div>
+        </div>
 
-                  <div class="banner-img">
-                    <img
-                      src="https://image.prospecs.com/front/ux/css/images/membership_logo_bk.svg"
-                      alt="프로스펙스 포인트 이미지"
-                    />
-                  </div> 
-                </a>
-              </div>
+        <div class="benefit-contents" style="display: none; border-top: 1px solid #eee; margin-top: 15px;">
+            <div class="signUp_complete_box">
+                <p class="notice-1 bold">임직원 회원 혜택</p>
+                
+                <div class="signUp_benefit_box">
+                    <div class="signUp_benefit_item">
+                        <span>제품 할인</span>
+                        <p>신발 40% 할인</p>
+                        <p class="last">의류 · 용품 50% 할인</p>
+                    </div>
+                </div>
+
+                <div class="signUp_benefit_box">
+                    <div class="signUp_benefit_item">
+                        <span>증정 혜택</span>
+                        <p>서울하프마라톤 · 춘천마라톤 참가권 추첨 증정</p>
+                        <p class="last">LG트윈스 · FC서울 경기 티켓 추첨 증정</p>
+                    </div>
+                </div>
+
+                <div class="signUp_benefit_box">
+                    <div class="signUp_benefit_item">
+                        <span>선 구매 혜택</span>
+                        <p>리미티드 에디션 우선 구매 혜택</p>
+                        <p class="last">임직원 프라이빗 세일 구매 혜택</p>
+                    </div>
+                </div>
+            </div>
+        </div> </div>
+</div>
               <!--멤버쉽혜택[e]-->
               <!-- 본인인증[s]-->
               <div class="sign_up-box">
@@ -2619,6 +2639,23 @@
               <!-- 본인인증[e]-->
             </div>
           </div>
+<script>
+          $(document).ready(function () {
+    // 임직원 혜택 배너 토글 로직
+    $('.membership-toggle-area').click(function () {
+        const $this = $(this);
+        const $content = $this.find('.benefit-contents');
+
+        if ($this.hasClass('closed')) {
+            $content.slideDown(400); // 부드럽게 열기
+            $this.removeClass('closed').addClass('open');
+        } else {
+            $content.slideUp(400); // 부드럽게 닫기
+            $this.removeClass('open').addClass('closed');
+        }
+    });
+});
+</script>
           <script>
             /* 얼럿팝업 닫기 */
             function popCloseBtn(button) {
