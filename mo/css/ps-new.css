@@ -4396,52 +4396,49 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
 
 
 /* 혜택보기 토글 */
-/* 배너 */
-.membership-banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.banner-text {
+/* 모바일 전체 컨테이너 */
+.sign_up-box-mo {
     width: 100%;
-    text-align: center;
 }
 
-.sub-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* 혜택 상세 박스: 원래 레이아웃 그대로 유지 */
+.signUp_complete_box { 
+    text-align: center; /* 제목과 전체 정렬은 기존 스타일 유지 */
+    padding: 20px 0; 
 }
 
-.toggle-arrow {
-    transition: transform 0.3s;
+.signUp_complete_box .notice-1.bold { 
+    font-size: 18px; 
+    font-weight: 600; 
+    margin-bottom: 20px; 
 }
 
-.membership-toggle-area.open .toggle-arrow {
-    transform: rotate(180deg);
+.signUp_benefit_box { 
+    padding: 10px 0; 
 }
 
-/* 혜택 영역 */
-.benefit-row {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #000;
+.signUp_benefit_box:last-child { 
+    border-bottom: none; 
 }
 
-.benefit-title {
-    font-weight: 600;
+/* 혜택 아이템: 기존 PC 스타일 유지 */
+.signUp_benefit_item span { 
+    display: block; 
+    font-weight: 600; 
+    margin-bottom: 5px; 
 }
 
-.benefit-desc {
-    text-align: right;
+.signUp_benefit_item p { 
+    margin: 2px 0; 
+    font-size: 15px; 
+    line-height: 1.4; /* 모바일 가독성을 위한 줄간격 */
 }
 
-.benefit-desc p {
-    margin: 0;
-    border-bottom: 1px solid #ccc;
+/* 화살표 회전 애니메이션 */
+.toggle-arrow { 
+    transition: transform 0.3s; 
 }
 
-.benefit-desc p:last-child {
-    border-bottom: none;
+.membership-toggle-area.open .toggle-arrow { 
+    transform: rotate(180deg); 
 }
