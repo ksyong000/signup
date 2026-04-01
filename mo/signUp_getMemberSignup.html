@@ -2167,6 +2167,22 @@
               </button>
             </div>
           </div>
+<script>
+$(document).ready(function () {
+    $('.membership-toggle-area').off('click').on('click', function () {
+        const $this = $(this);
+        const $content = $this.find('.benefit-contents');
+
+        if ($this.hasClass('closed')) {
+            $content.slideDown(300);
+            $this.removeClass('closed').addClass('open');
+        } else {
+            $content.slideUp(300);
+            $this.removeClass('open').addClass('closed');
+        }
+    });
+});
+</script>         
           <!-- 약관 체크[s]-->
           <script type="text/javascript">
             // 약관 전체 동의
