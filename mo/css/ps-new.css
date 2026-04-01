@@ -35,10 +35,10 @@ button {
   align-items: center;
 }
 
-.ps-new .terms-wrap .ps-chkbox>label  {
-    height: 28px;
-    display: flex;
-    align-items: center;
+.ps-new .terms-wrap .ps-chkbox > label {
+  height: 28px;
+  display: flex;
+  align-items: center;
 }
 
 .ps-new .ps-chkbox > label > input[type="checkbox"] + .text {
@@ -4079,6 +4079,18 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
 .signUp_form_wrap.edit_form {
   margin-top: 32px;
 }
+.signUp_form_wrap .signUp_form_item:first-child .signUp_form_item_input {
+  flex: 0 0 220px;
+}
+.signUp_form_wrap .signUp_form_item .signUp_form_item_select {
+  flex: 1;
+}
+.signUp_form_wrap
+  .signUp_form_item
+  .signUp_form_item_select
+  .selectric-wrapper.selectric-h-small {
+  width: 100%;
+}
 .signUp_form_wrap .table-radio-check {
   margin-top: 2px;
 }
@@ -4392,53 +4404,54 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
   margin-top: 76px;
 }
 
-.verification .terms-wrap .ps-chkbox.all-chk{align-items:center;}
-
+.verification .terms-wrap .ps-chkbox.all-chk {
+  align-items: center;
+}
 
 /* 혜택보기 토글 */
 /* 모바일 전체 컨테이너 */
 .sign_up-box-mo {
-    width: 100%;
+  width: 100%;
 }
 
 /* 혜택 상세 박스: 원래 레이아웃 그대로 유지 */
-.signUp_complete_box { 
-    text-align: center; /* 제목과 전체 정렬은 기존 스타일 유지 */
-    padding: 20px 0; 
+.signUp_complete_box {
+  text-align: center; /* 제목과 전체 정렬은 기존 스타일 유지 */
+  padding: 20px 0;
 }
 
-.signUp_complete_box .notice-1.bold { 
-    font-size: 18px; 
-    font-weight: 600; 
-    margin-bottom: 20px; 
+.signUp_complete_box .notice-1.bold {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-.signUp_benefit_box { 
-    padding: 10px 0; 
+.signUp_benefit_box {
+  padding: 10px 0;
 }
 
-.signUp_benefit_box:last-child { 
-    border-bottom: none; 
+.signUp_benefit_box:last-child {
+  border-bottom: none;
 }
 
 /* 혜택 아이템: 기존 PC 스타일 유지 */
-.signUp_benefit_item span { 
-    display: block; 
-    font-weight: 600; 
-    margin-bottom: 5px; 
+.signUp_benefit_item span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
-.signUp_benefit_item p { 
-    margin: 2px 0; 
-    font-size: 15px; 
-    line-height: 1.4; /* 모바일 가독성을 위한 줄간격 */
+.signUp_benefit_item p {
+  margin: 2px 0;
+  font-size: 15px;
+  line-height: 1.4; /* 모바일 가독성을 위한 줄간격 */
 }
 
 /* 화살표 회전 애니메이션 */
-.toggle-arrow { 
-    transition: transform 0.3s; 
+.toggle-arrow {
+  transition: transform 0.3s;
 }
 
-.membership-toggle-area.open .toggle-arrow { 
-    transform: rotate(180deg); 
+.membership-toggle-area.open .toggle-arrow {
+  transform: rotate(180deg);
 }
