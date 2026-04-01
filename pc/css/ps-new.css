@@ -4581,6 +4581,18 @@ body {
 .signUp_step ul li.complete span:before{background:var(--color-90);}
 
 /* 회원가입 입력폼 */
+.signUp_form_wrap .signUp_form_item:first-child .signUp_form_item_input:first-of-type {
+  flex: 0 0 220px;
+}
+.signUp_form_wrap .signUp_form_item .signUp_form_item_select {
+  flex: 1;
+}
+.signUp_form_wrap
+  .signUp_form_item
+  .signUp_form_item_select
+  .selectric-wrapper.selectric-h-small {
+  width: 100%;
+}
 .signUp_form_wrap{display:flex;flex-direction:column;gap:32px;margin-top:80px}
 .signUp_form_wrap.edit_form{margin-top:32px;}
 .signUp_form_wrap .table-radio-check{margin-top:2px;}
