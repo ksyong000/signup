@@ -4634,7 +4634,6 @@ body {
     
     .signUp_benefit_box { 
         padding: 15px 0; 
-        border-bottom: 1px solid #eee; /* 깔끔한 구분선 */
     }
     .signUp_benefit_box:last-child { border-bottom: none; } /* 마지막 선은 제거 */
     
