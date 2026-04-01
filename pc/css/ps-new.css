@@ -4626,3 +4626,19 @@ body {
 .signUp_wrap .sns-list--box > li{padding:20px 10px;}
 .signUp_wrap .sns-list--box > li > img{width:35px;}
 .signUp_wrap .sns-list--box > li > span{margin-left:8px;}
+
+
+.signUp_complete_box { text-align: center; padding: 20px 0; }
+    .signUp_complete_box h3 { font-weight: 600; font-size: 22px; color: #000; text-align: center; margin-bottom: 20px; }
+    .signUp_complete_box p.notice-1 { font-size: 16px; color: #333; text-align: center; margin-top: 16px; font-weight: 500; }
+    .signUp_complete_box p.notice-1.bold { font-size: 18px; margin-bottom: 15px; }
+    
+    .signUp_benefit_box { margin-bottom: 10px; }
+    .signUp_benefit_item { background: #f9f9f9; padding: 15px; border-radius: 8px; text-align: center; }
+    .signUp_benefit_item span { display: inline-block; font-weight: 500; color: #127DD0; margin-bottom: 8px; font-size: 14px; }
+    .signUp_benefit_item p { font-size: 15px; color: #333; margin: 4px 0; }
+    .signUp_benefit_item p.last { margin-bottom: 0; }
+
+    /* 토글 화살표 애니메이션을 위한 추가 CSS */
+    .toggle-arrow { transition: transform 0.3s ease; }
+    .membership-toggle-area.open .toggle-arrow { transform: rotate(180deg); }
