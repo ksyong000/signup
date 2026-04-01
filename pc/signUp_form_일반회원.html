@@ -1421,6 +1421,16 @@
                       />
                     </div>
                     @
+                    <div
+                      class="signUp_form_item_input domain-input"
+                      style="display: none"
+                    >
+                      <input
+                        type="text"
+                        class="inp"
+                        data-gtm-form-interact-field-id="1"
+                      />
+                    </div>
                     <div class="signUp_form_item_select">
                       <select
                         name="MAIL_DOMAIN"
@@ -1650,6 +1660,18 @@
               >
             </div>
           </div>
+          <script>
+            document
+              .getElementById("MAIL_DOMAIN")
+              .addEventListener("change", function () {
+                var domainInput = document.querySelector(".domain-input");
+                if (this.value === "99") {
+                  domainInput.style.display = "block";
+                } else {
+                  domainInput.style.display = "none";
+                }
+              });
+          </script>
           <!--회원가입 약관동의[e]-->
         </div>
       </main>

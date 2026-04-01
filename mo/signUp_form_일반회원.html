@@ -922,7 +922,7 @@
                 <!--이메일[s]-->
                 <div class="signUp_form_item">
                   <h5 class="required"><span>이메일</span></h5>
-                  <div class="signUp_form_item_box">
+                  <div class="signUp_form_item_box" style="flex-wrap: wrap">
                     <div class="signUp_form_item_input" style="flex: 0 0 120px">
                       <input
                         type="hidden"
@@ -943,7 +943,20 @@
                       />
                     </div>
                     @
-                    <div class="signUp_form_item_select">
+                    <div
+                      class="signUp_form_item_input domain-input disabled-input"
+                    >
+                      <input
+                        type="text"
+                        class="inp"
+                        disabled
+                        data-gtm-form-interact-field-id="1"
+                      />
+                    </div>
+                    <div
+                      class="signUp_form_item_select"
+                      style="width: 100%; flex: 0 0 100%"
+                    >
                       <select
                         name="MAIL_DOMAIN"
                         id="MAIL_DOMAIN"
@@ -1200,6 +1213,27 @@
               >
             </div>
           </div>
+          <script>
+            document
+              .getElementById("MAIL_DOMAIN")
+              .addEventListener("change", function () {
+                var domainInput = document.querySelector(".domain-input");
+                if (this.value === "99") {
+                  domainInput.querySelector("input").disabled = false;
+                  domainInput.querySelector("input").focus();
+                  domainInput.querySelector("input").value = "";
+                  domainInput.classList.remove("disabled-input");
+                } else {
+                  domainInput.querySelector("input").disabled = true;
+                  domainInput.classList.add("disabled-input");
+                  var selectedOption = this.options[this.selectedIndex];
+                  var domainInputField = domainInput.querySelector("input");
+                  if (this.value !== "99") {
+                    domainInputField.value = selectedOption.text;
+                  }
+                }
+              });
+          </script>
           <!--회원가입 약관동의[e]-->
         </div>
       </main>
