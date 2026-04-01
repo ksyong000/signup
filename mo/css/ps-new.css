@@ -4396,63 +4396,31 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
 
 
 /* 혜택보기 토글 */
-/* 모바일 전용 레이아웃 스타일 */
 
-    /* 전체 컨테이너: 모바일 화면 꽉 차게 */
-    .sign_up-box {
-        width: 100% !important;
-        padding: 1rem 0 !important;
-        margin: 0 auto;
+    /* 기본 레이아웃 */
+    .sign_up-box { 
+        width: 100% !important; 
+        padding: 1rem 0 !important; 
     }
 
-    /* 혜택 박스 전체 정렬 */
-    .signUp_complete_box {
-        text-align: left; /* 이미지처럼 왼쪽 정렬이 가독성이 좋습니다 */
-        padding: 20px 15px;
+    .signUp_complete_box { text-align: center; padding: 20px 0; }
+    .signUp_complete_box .notice-1.bold { font-size: 18px; font-weight: 600; margin-bottom: 20px; }
+    
+    .signUp_benefit_box { 
+        padding: 10px 0; 
+    }
+    
+    .signUp_benefit_item span { display: block; font-weight: 600; margin-bottom: 5px; }
+
+    /* 모바일에서 내용이 겹치지 않도록 블록 처리 */
+    .signUp_benefit_item p { 
+        display: block; 
+        margin: 2px 0; 
+        font-size: 15px; 
+        line-height: 1.5;
     }
 
-    /* 상단 타이틀 */
-    .signUp_complete_box .notice-1.bold {
-        display: block;
-        text-align: center;
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 25px;
-    }
+    /* 화살표 회전 애니메이션 */
+    .toggle-arrow { transition: transform 0.3s; width: 12px; }
+    .membership-toggle-area.open .toggle-arrow { transform: rotate(180deg); }
 
-    /* 각 혜택 세트 (구분선) */
-    .signUp_benefit_box {
-        padding: 15px 0;
-        border-bottom: 1px solid #eee;
-    }
-    .signUp_benefit_box:last-child {
-        border-bottom: none;
-    }
-
-    /* 혜택 카테고리 (제품 할인, 증정 혜택 등) */
-    .signUp_benefit_item .benefit-category {
-        display: block;
-        font-weight: 700;
-        font-size: 15px;
-        margin-bottom: 8px;
-        color: #000;
-    }
-
-    /* 상세 혜택 내용 (강제 줄바꿈 및 간격 조절) */
-    .signUp_benefit_item .benefit-content {
-        display: block; /* 한 줄에 하나씩 나오게 강제 설정 */
-        font-size: 14px;
-        line-height: 1.6;
-        color: #666;
-        padding-left: 5px;
-        margin-bottom: 4px;
-    }
-
-    /* 화살표 애니메이션 */
-    .toggle-arrow {
-        transition: transform 0.3s;
-        width: 12px;
-    }
-    .membership-toggle-area.open .toggle-arrow {
-        transform: rotate(180deg);
-    }
