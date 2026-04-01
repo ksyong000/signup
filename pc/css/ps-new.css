@@ -4586,6 +4586,7 @@ body {
 }
 .signUp_form_wrap .signUp_form_item .signUp_form_item_select {
   flex: 1;
+  height:43px;
 }
 .signUp_form_wrap
   .signUp_form_item
