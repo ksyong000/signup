@@ -4399,32 +4399,39 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
 
     .sign_up-box { width: 100% !important; margin: 0 auto; padding: 1rem 0 !important; }
 
-    /* 혜택 박스 레이아웃 */
-    .signUp_complete_box { text-align: center; padding: 20px 0; }
-    .signUp_complete_box .notice-1.bold { display: block; font-size: 18px; font-weight: 600; margin-bottom: 20px; }
+    /* [배너 영역] 요청하신 대로 중앙 정렬 */
+    .membership-banner { text-align: center; padding: 20px 0; }
+    .membership-banner .sub-link { 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        gap: 5px; 
+        margin-top: 8px; 
+        font-weight: bold; 
+    }
+
+    /* [혜택 상세 영역] */
+    .signUp_complete_box { padding: 20px 0; text-align: center; }
+    .signUp_complete_box .notice-1.bold { font-size: 18px; font-weight: 600; margin-bottom: 20px; display: block; }
     
-    /* 각 혜택 세트 */
-    .signUp_benefit_box { padding: 15px 0; border-bottom: 1px solid #eee; }
+    .signUp_benefit_box { padding: 12px 0; border-bottom: 1px solid #eee; }
     .signUp_benefit_box:last-child { border-bottom: none; }
-    
-    /* 혜택 항목 스타일 */
-    .signUp_benefit_item { width: 100%; }
-    
-    /* [카테고리 제목] 무조건 한 줄 차지 */
+
+    /* 카테고리(제품 할인 등) */
     .signUp_benefit_item span { 
         display: block; 
         font-weight: 600; 
-        margin-bottom: 10px; 
+        margin-bottom: 8px; 
         font-size: 15px; 
     }
 
-    /* [상세 내용] 무조건 한 줄 차지 + 텍스트 안 깨지게 설정 */
+    /* 상세 내용(신발 40% 등) - 무조건 한 줄에 하나씩 */
     .signUp_benefit_item p { 
         display: block; 
-        margin: 5px 0; 
+        margin: 4px 0; 
         font-size: 14px; 
         line-height: 1.6; 
-        word-break: keep-all; /* 단어 단위로 줄바꿈 방지 */
+        word-break: keep-all; 
     }
 
     /* 화살표 애니메이션 */
