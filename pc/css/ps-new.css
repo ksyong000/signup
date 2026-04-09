@@ -13,7 +13,7 @@ body {
   font-feature-settings: "pnum" on, "lnum" on, "case" on, "ss01" on;
 }
 
-*::-webkit-scrollbar {
+* :not(.selectric-scroll)::-webkit-scrollbar  {
   display: none;
 }
 

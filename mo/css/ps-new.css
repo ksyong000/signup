@@ -4261,7 +4261,7 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
 }
 
 /* 약관동의 */
-.ps-cont-head {
+.singn_up--terms-ck .ps-cont-head {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4447,4 +4447,124 @@ body:not(.topSlideY) .ps-new .sponsorship--wrap:before {
 
 .membership-toggle-area.open .toggle-arrow {
   transform: rotate(180deg);
+}
+
+/* 약관내용 */
+.agree_wp {
+  width: 100% !important;
+}
+
+.agree_in {
+  font-size: 13px;
+  color: var(--color-90);
+  line-height: 20px;
+  font-weight: 300;
+  width: 100% !important;
+}
+
+.agree_in .a_tit {
+  font-size: 14px;
+  color: var(--color-90);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.agree_in .b_tit {
+  font-weight: 500;
+  margin: 0 !important;
+  font-size: 14px;
+  padding: 18px 0 14px;
+}
+
+.agree_in .m_txt {
+  font-size: 13px;
+  color: var(--color-90);
+  font-weight: normal;
+  margin: 0px 0 15px;
+}
+
+.agree_in .s_txt {
+  margin-bottom: 10px;
+}
+
+.agree_in dl {
+  padding-bottom: 15px;
+}
+
+.agree_in dl dt {
+  font-weight: 500;
+  padding-bottom: 7px;
+  margin: 0 !important;
+  font-size: 14px;
+}
+
+.agree_in dl dd {
+  padding-bottom: 5px;
+  font-size: 13px;
+}
+
+.agree_in dl dd.blt_txt {
+  background: url("//image.prospecs.com/front/images/common/blt_cir.png") 7px
+    8px no-repeat;
+  padding-left: 15px;
+}
+
+.agree_in dl dd.dash_txt {
+  background: url("//image.prospecs.com/front/images/common/blt_bkbar.png") 12px
+    10px no-repeat;
+  padding-left: 20px;
+}
+
+/* .agree_in .sp_txt {
+  padding-left: 20px;
+} */
+
+.agree_in .sp_lst {
+  padding-left: 10px;
+}
+
+.agree_in .pt_txt {
+  color: #e76c1f !important;
+}
+
+.agree_in p {
+  font-size: 13px;
+}
+
+.agree_in .table_agr {
+}
+
+.agree_in .table_agr table {
+  table-layout: fixed;
+  width: 100%;
+  border: 1px solid #cccccc;
+}
+
+.agree_in .table_agr table thead th {
+  background: #eaeaea;
+  font-size: 12px;
+  color: var(--color-70);
+  padding: 7px 0 5px;
+  border-bottom: 1px solid #dfdfdf;
+  border-left: 1px solid #dfdfdf;
+}
+
+.agree_in .table_agr table thead th:first-child {
+  border-left: none;
+}
+
+.agree_in .table_agr table tbody td {
+  background: #fff;
+  font-size: 12px;
+  color: var(--color-70);
+  padding: 7px 10px 5px;
+  border-left: 1px solid #dfdfdf;
+}
+
+.agree_in .table_agr table tbody td:first-child {
+  border-left: none;
+}
+
+.agree_in .table_agr table tbody tr.botlline td {
+  border-bottom: 1px solid #dfdfdf;
 }
