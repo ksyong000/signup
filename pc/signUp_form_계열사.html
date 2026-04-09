@@ -1400,8 +1400,78 @@
                 <!--이메일[s]-->
                 <div class="signUp_form_item">
                   <h5 class="required"><span>이메일</span></h5>
+                  <!-- 셀렉트박스는 기존 구조 유지하되 위치만변경 signUp_form_item_box위로 이동[s]-->
+                  <!--아래 selectric은 외관상 라이브러리 동작했을때를 보여주기 위해 임시로 넣음것-->
+                  <div class="signUp_form_item_select">
+                    <div
+                      class="selectric-wrapper selectric-ps-select selectric-h-small selectric-below"
+                    >
+                      <div class="selectric-hide-select">
+                        <div class="selector">
+                          <span>회사 선택</span>
+                        </div>
+                      </div>
+                      <div class="selectric">
+                        <span class="label">회사 선택</span
+                        ><b class="button">▾</b>
+                      </div>
+                      <div
+                        class="selectric-items"
+                        tabindex="-1"
+                        style="width: 314px; height: 301.778px"
+                      >
+                        <div class="selectric-scroll">
+                          <ul>
+                            <li data-index="0" class="selected highlighted">
+                              회사 선택
+                            </li>
+                            <li data-index="1" class="">(주)E1</li>
+                            <li data-index="2" class="">E1 컨테이너 터미널</li>
+                            <li data-index="3" class="">KTM</li>
+                            <li data-index="4" class="">LS E-Link</li>
+                            <li data-index="5" class="">
+                              LS e-mobility solutions
+                            </li>
+                            <li data-index="6" class="">
+                              LS ELECTRIC(ls-electric.com)
+                            </li>
+                            <li data-index="7" class="">
+                              LS ELECTRIC(lselectric.co.kr)
+                            </li>
+                            <li data-index="8" class="">
+                              LS ELECTRIC(lsis.biz)
+                            </li>
+                            <li data-index="9" class="">LS ITC</li>
+                            <li data-index="10" class="">LS-NIKKO</li>
+                            <li data-index="11" class="">LS글로벌</li>
+                            <li data-index="12" class="">LS네트웍스</li>
+                            <li data-index="13" class="">LS머트리얼즈</li>
+                            <li data-index="14" class="">LS메탈</li>
+                            <li data-index="15" class="">LS사우타</li>
+                            <li data-index="16" class="">(주)LS자산운용</li>
+                            <li data-index="17" class="">LS전선</li>
+                            <li data-index="18" class="">LS증권</li>
+                            <li data-index="19" class="">LS엠트론</li>
+                            <li data-index="20" class="">LS오토모티브</li>
+                            <li data-index="21" class="">(주)LS</li>
+                            <li data-index="22" class="">LSEVKorea</li>
+                            <li data-index="23" class="">가온전선</li>
+                            <li data-index="24" class="">(주)바이클로</li>
+                            <li data-index="25" class="">베스트토요타</li>
+                            <li data-index="26" class="">엘에스아이앤디</li>
+                            <li data-index="27" class="">엠비케이코퍼레이션</li>
+                            <li data-index="28" class="">예스코홀딩스</li>
+                            <li data-index="29" class="last">
+                              예스코(예스코관리/대한가스)
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 셀렉트박스는 기존 구조 유지하되 위치만변경 signUp_form_item_box위로 이동[e]-->
                   <div class="signUp_form_item_box">
-                    <div class="signUp_form_item_input">
+                    <div class="signUp_form_item_input" style="flex: 0 0 220px">
                       <input
                         type="hidden"
                         name="EMAIL_EMPLOYEE_YN"
@@ -1416,24 +1486,23 @@
                         placeholder="아이디를 입력해 주세요."
                         value=""
                         onblur="jfCheckEmail();"
-                        style="flex: 0 0 220px"
                         data-gtm-form-interact-field-id="0"
                       />
                     </div>
                     @
-                    <div class="signUp_form_item_select">
-                      <select
-                        name="MAIL_DOMAIN"
-                        id="MAIL_DOMAIN"
-                        class="ps-select h-small"
-                        onchange="jfChangeMailDomain(this); jfCheckEmail();"
-                      >
-                        <option value="">소속 회사 선택</option>
-                        <option value="daum.net">임직원계열사</option>
-                        <option value="naver.com">임직원계열사</option>
-                      </select>
+                    <div class="signUp_form_item_input domain-input">
+                      <input
+                        type="text"
+                        class="inp"
+                        readonly
+                        data-gtm-form-interact-field-id="1"
+                      />
                     </div>
                   </div>
+                  <p class="errorMessage">
+                    회사 선택 시 도메인이 자동 입력되며, 인증메일 수신을 위해
+                    정확한 아이디를 입력해 주세요.
+                  </p>
                   <div class="table-radio-check">
                     <div class="radio-box">
                       <div class="ps-chkbox">
@@ -1478,7 +1547,6 @@
                       </div>
                     </div>
                   </div>
-                 <p class="errorMessage">메일 주소를 선택해 주세요.</p>
                 </div>
                 <!--이메일[e]-->
                 <!--비밀번호[s]-->
@@ -1731,6 +1799,24 @@
               >
             </div>
           </div>
+          <script>
+            // .selectric-scroll의 li를 클릭하면 선택된 li의 텍스트를 이메일 도메인 input에 넣어줌
+            document
+              .querySelectorAll(".selectric-scroll li")
+              .forEach(function (li) {
+                li.addEventListener("click", function () {
+                  var domainInput = document.querySelector(".domain-input");
+                  if (!domainInput) return;
+                  var domainInputField = domainInput.querySelector("input");
+                  if (!domainInputField) return;
+                  if (this.textContent.trim() !== "회사 선택") {
+                    domainInputField.value = this.textContent.trim();
+                  } else {
+                    domainInputField.value = "";
+                  }
+                });
+              });
+          </script>
           <!--회원가입 약관동의[e]-->
         </div>
       </main>

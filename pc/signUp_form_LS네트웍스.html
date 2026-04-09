@@ -1400,8 +1400,78 @@
                 <!--이메일[s]-->
                 <div class="signUp_form_item">
                   <h5 class="required"><span>이메일</span></h5>
+                  <!-- 셀렉트박스는 기존 구조 유지하되 위치만변경 signUp_form_item_box위로 이동[s]-->
+                  <!--아래 selectric은 외관상 라이브러리 동작했을때를 보여주기 위해 임시로 넣음것-->
+                  <div class="signUp_form_item_select">
+                    <div
+                      class="selectric-wrapper selectric-ps-select selectric-h-small selectric-below"
+                    >
+                      <div class="selectric-hide-select">
+                        <div class="selector">
+                          <span>회사 선택</span>
+                        </div>
+                      </div>
+                      <div class="selectric">
+                        <span class="label">회사 선택</span
+                        ><b class="button">▾</b>
+                      </div>
+                      <div
+                        class="selectric-items"
+                        tabindex="-1"
+                        style="width: 314px; height: 301.778px"
+                      >
+                        <div class="selectric-scroll">
+                          <ul>
+                            <li data-index="0" class="selected highlighted">
+                              회사 선택
+                            </li>
+                            <li data-index="1" class="">(주)E1</li>
+                            <li data-index="2" class="">E1 컨테이너 터미널</li>
+                            <li data-index="3" class="">KTM</li>
+                            <li data-index="4" class="">LS E-Link</li>
+                            <li data-index="5" class="">
+                              LS e-mobility solutions
+                            </li>
+                            <li data-index="6" class="">
+                              LS ELECTRIC(ls-electric.com)
+                            </li>
+                            <li data-index="7" class="">
+                              LS ELECTRIC(lselectric.co.kr)
+                            </li>
+                            <li data-index="8" class="">
+                              LS ELECTRIC(lsis.biz)
+                            </li>
+                            <li data-index="9" class="">LS ITC</li>
+                            <li data-index="10" class="">LS-NIKKO</li>
+                            <li data-index="11" class="">LS글로벌</li>
+                            <li data-index="12" class="">LS네트웍스</li>
+                            <li data-index="13" class="">LS머트리얼즈</li>
+                            <li data-index="14" class="">LS메탈</li>
+                            <li data-index="15" class="">LS사우타</li>
+                            <li data-index="16" class="">(주)LS자산운용</li>
+                            <li data-index="17" class="">LS전선</li>
+                            <li data-index="18" class="">LS증권</li>
+                            <li data-index="19" class="">LS엠트론</li>
+                            <li data-index="20" class="">LS오토모티브</li>
+                            <li data-index="21" class="">(주)LS</li>
+                            <li data-index="22" class="">LSEVKorea</li>
+                            <li data-index="23" class="">가온전선</li>
+                            <li data-index="24" class="">(주)바이클로</li>
+                            <li data-index="25" class="">베스트토요타</li>
+                            <li data-index="26" class="">엘에스아이앤디</li>
+                            <li data-index="27" class="">엠비케이코퍼레이션</li>
+                            <li data-index="28" class="">예스코홀딩스</li>
+                            <li data-index="29" class="last">
+                              예스코(예스코관리/대한가스)
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 셀렉트박스는 기존 구조 유지하되 위치만변경 signUp_form_item_box위로 이동[e]-->
                   <div class="signUp_form_item_box">
-                    <div class="signUp_form_item_input">
+                    <div class="signUp_form_item_input" style="flex: 0 0 220px">
                       <input
                         type="hidden"
                         name="EMAIL_EMPLOYEE_YN"
@@ -1413,29 +1483,68 @@
                         class="inp"
                         name="EMAIL1"
                         id="EMAIL1"
-                        placeholder=""
-                        value="text1234"
-                        readonly
+                        placeholder="아이디를 입력해 주세요."
+                        value=""
                         onblur="jfCheckEmail();"
-                        style="flex: 0 0 220px"
                         data-gtm-form-interact-field-id="0"
                       />
                     </div>
                     @
-                    <div class="signUp_form_item_select">
-                      <select
-                        name="MAIL_DOMAIN"
-                        id="MAIL_DOMAIN"
-                        class="ps-select h-small"
-                        onchange="jfChangeMailDomain(this); jfCheckEmail();"
-                      >
-                        <option value="">소속 회사 선택</option>
-                        <option selected disabled value="daum.net">
-                          lsnetworks.com
-                        </option>
-                        <option value="naver.com">lsnetworks.com</option>
-                        <option value="chol.com">임직원계열사</option>
-                      </select>
+                    <div class="signUp_form_item_input domain-input">
+                      <input
+                        type="text"
+                        class="inp"
+                        readonly
+                        data-gtm-form-interact-field-id="1"
+                      />
+                    </div>
+                  </div>
+                  <p class="errorMessage">
+                    회사 선택 시 도메인이 자동 입력되며, 인증메일 수신을 위해
+                    정확한 아이디를 입력해 주세요.
+                  </p>
+                  <div class="table-radio-check">
+                    <div class="radio-box">
+                      <div class="ps-chkbox">
+                        <input type="hidden" name="EMAIL_YN" id="EMAIL_YN" />
+                        <label>
+                          <input
+                            type="radio"
+                            name="T_EMAIL_YN"
+                            id="EMAIL_YN1"
+                            value="Y"
+                            onchange="jfCheckEmail();"
+                          />
+                          <span class="text">이메일 수신동의</span>
+                        </label>
+                      </div>
+                      <div class="ps-chkbox">
+                        <label>
+                          <input
+                            type="radio"
+                            name="T_EMAIL_YN"
+                            id="EMAIL_YN2"
+                            value="N"
+                            onchange="jfCheckEmail();"
+                          />
+                          <span class="text">이메일 수신거부</span>
+                        </label>
+                      </div>
+                      <div class="tooltip-box">
+                        <button type="button" class="ps-btn icon tooltip">
+                          <span>툴팁</span>
+                        </button>
+                        <div class="tooltip-box-cont">
+                          <p>
+                            이메일 수신에 동의하실 경우<br />
+                            프로스펙스닷컴의 다양한 혜택과<br />
+                            세일정보를 안내받을 수 있습니다.<br /><br />
+
+                            정보성 및 주문/배송 안내 내용은<br />
+                            수신동의 여부와 관계없이 발송됩니다.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -4586,7 +4586,7 @@ body {
 }
 .signUp_form_wrap .signUp_form_item .signUp_form_item_select {
   flex: 1;
-  height:43px;
+  height:41px;
 }
 .signUp_form_wrap
   .signUp_form_item
@@ -4607,7 +4607,7 @@ body {
 .signUp_form_item_box .signUp_form_item_input input{width:100%;height:100%;border:none;outline:none;font-size:16px;color:var(--color-100);}
 .signUp_form_item_box .signUp_form_item_input input::-webkit-placeholder{color:var(--color-50);font-size:16px;}
 
-.signUp_wrap .ps-btn-wrap{margin-top:0px;}
+.signUp_wrap .ps-btn-wrap{margin-top:40px;}
 .signUp_wrap .ps-btn-wrap .ps-btn{height:56px !important;line-height:56px !important}
 .signUp_wrap .ps-btn-wrap .ps-btn:disabled{background:var(--color-10);color:var(--color-50);}
 .signUp_form_item_select .selectric-wrapper .selectric > .label{border-left:none;border-top:none;border-right:none;}
