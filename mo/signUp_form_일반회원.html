@@ -943,13 +943,11 @@
                       />
                     </div>
                     @
-                    <div
-                      class="signUp_form_item_input domain-input disabled-input"
-                    >
+                    <div class="signUp_form_item_input domain-input">
                       <input
                         type="text"
                         class="inp"
-                        disabled
+                        readonly
                         data-gtm-form-interact-field-id="1"
                       />
                     </div>
@@ -1219,13 +1217,11 @@
               .addEventListener("change", function () {
                 var domainInput = document.querySelector(".domain-input");
                 if (this.value === "99") {
-                  domainInput.querySelector("input").disabled = false;
+                  domainInput.querySelector("input").readOnly = false;
                   domainInput.querySelector("input").focus();
                   domainInput.querySelector("input").value = "";
-                  domainInput.classList.remove("disabled-input");
                 } else {
-                  domainInput.querySelector("input").disabled = true;
-                  domainInput.classList.add("disabled-input");
+                  domainInput.querySelector("input").readOnly = true;
                   var selectedOption = this.options[this.selectedIndex];
                   var domainInputField = domainInput.querySelector("input");
                   if (this.value !== "99") {
