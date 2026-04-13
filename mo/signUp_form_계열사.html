@@ -922,49 +922,52 @@
               <div class="signUp_form_wrap">
                 <!--이메일[s]-->
                 <div class="signUp_form_item">
-                  <h5 class="required"><span>이메일</span></h5>
-                  <div class="signUp_form_item_box">
-                    <div class="signUp_form_item_input" style="flex: 0 0 120px">
-                      <input
-                        type="hidden"
-                        name="EMAIL_EMPLOYEE_YN"
-                        id="EMAIL_EMPLOYEE_YN"
-                        value="Y"
-                      />
-                      <input
-                        type="text"
-                        class="inp"
-                        name="EMAIL1"
-                        id="EMAIL1"
-                        placeholder="example"
-                        value=""
-                        onblur="jfCheckEmail();"
-                        data-gtm-form-interact-field-id="0"
-                      />
-                    </div>
-                    @
-                    <div class="signUp_form_item_select">
-                      <select
-                        name="MAIL_DOMAIN"
-                        id="MAIL_DOMAIN"
-                        class="ps-select h-small"
-                        onchange="jfChangeMailDomain(this); jfCheckEmail();"
-                      >
-                        <option value="">소속 회사 선택</option>
-                        <option value="daum.net">daum.net</option>
-                        <option value="naver.com">naver.com</option>
-                        <option value="chol.com">chol.com</option>
-                        <option value="dreamwiz.com">dreamwiz.com</option>
-                        <option value="gmail.com">gmail.com</option>
-                        <option value="hotmail.com">hotmail.com</option>
-                        <option value="korea.com">korea.com</option>
-                        <option value="nate.com">nate.com</option>
-                        <option value="yahoo.com">yahoo.com</option>
-                        <option value="99">기타(직접입력)</option>
-                        <option value="999">임직원/계열사</option>
-                      </select>
-                    </div>
-                  </div>
+                <h5 class="required"><span>이메일</span></h5>
+<div class="signUp_form_item_box">
+  <div class="signUp_form_item_select">
+    <select
+      name="MAIL_DOMAIN"
+      id="MAIL_DOMAIN"
+      class="ps-select h-small"
+      onchange="jfChangeMailDomain(this); jfCheckEmail();"
+    >
+      <option value="">소속 회사 선택</option>
+      <option value="daum.net">daum.net</option>
+      <option value="naver.com">naver.com</option>
+      <option value="chol.com">chol.com</option>
+      <option value="dreamwiz.com">dreamwiz.com</option>
+      <option value="gmail.com">gmail.com</option>
+      <option value="hotmail.com">hotmail.com</option>
+      <option value="korea.com">korea.com</option>
+      <option value="nate.com">nate.com</option>
+      <option value="yahoo.com">yahoo.com</option>
+      <option value="99">기타(직접입력)</option>
+      <option value="999">임직원/계열사</option>
+    </select>
+  </div>
+
+  @
+
+  <div class="signUp_form_item_input" style="flex: 0 0 120px">
+    <input
+      type="hidden"
+      name="EMAIL_EMPLOYEE_YN"
+      id="EMAIL_EMPLOYEE_YN"
+      value="Y"
+    />
+    <input
+      type="text"
+      class="inp"
+      name="EMAIL1"
+      id="EMAIL1"
+      placeholder="example"
+      value=""
+      onblur="jfCheckEmail();"
+      data-gtm-form-interact-field-id="0"
+    />
+  </div>
+</div>
+
                   <ul class="ps-list type6">
                     <li>
                       <div class="ps-chkbox">
@@ -1036,7 +1039,7 @@
                       <input
                         type="password"
                         class="inp"
-                        placeholder="비밀번호를 다시 입력해주세요."
+                        placeholder="비밀번호 확인을 위해 다시 한 번 입력해 주세요."
                         id="PASSWD_CONFIRM"
                         onkeyup="jfCheckPasswordLevel();"
                         onblur="jfCheckPasswordLevel();"
