@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -88,7 +88,7 @@
             "/common.do?cmd=setTopBBDisYnAjax",
             $.param(params),
             function (result) {},
-            "text"
+            "text",
           );
           document.querySelector(".top-txt-banner").classList.toggle("hide");
           document
@@ -123,7 +123,7 @@
                   >[EVENT] 서하마 참가권 추첨 이벤트 당첨자 문자 발송 안내</a
                 >
               </p>
-              <button class="close-btn" onclick="jfTopBBClose();"></button>
+              <button class="close-btn" onclick="jfTopBBClose()"></button>
             </div>
 
             <div
@@ -141,7 +141,7 @@
                   >APP 다운로드 시 3,000포인트 증정</a
                 >
               </p>
-              <button class="close-btn" onclick="jfTopBBClose();"></button>
+              <button class="close-btn" onclick="jfTopBBClose()"></button>
             </div>
 
             <div
@@ -159,7 +159,7 @@
                   >카카오톡 채널 친구 추가 시 5,000원 쿠폰 증정</a
                 >
               </p>
-              <button class="close-btn" onclick="jfTopBBClose();"></button>
+              <button class="close-btn" onclick="jfTopBBClose()"></button>
             </div>
           </div>
         </div>
@@ -176,11 +176,11 @@
                 class="search-btn"
                 data-open-layer="commonSearch"
                 id="search"
-                onclick="jfGnbSearch();"
+                onclick="jfGnbSearch()"
               ></button>
             </li>
             <li class="has-cart hide-indicator">
-              <button onclick="cfGoToPage(_PAGE_CART_LIST);">CART</button>
+              <button onclick="cfGoToPage(_PAGE_CART_LIST)">CART</button>
             </li>
             <li>
               <button class="menu-btn" id="sideMenuClose">MENU</button>
@@ -194,7 +194,10 @@
               <a
                 class="login-page-btn underline"
                 href="javascript:void('0');"
-                onclick="cfGoToPage(_PAGE_LOGIN); return false;"
+                onclick="
+                  cfGoToPage(_PAGE_LOGIN);
+                  return false;
+                "
                 >로그인</a
               >하시고,<br />다양한 혜택을 만나보세요!
             </p>
@@ -207,7 +210,10 @@
               </button>
               <button
                 class="mypage-btn"
-                onclick="cfGoToPage(_PAGE_MEMBER_SIGNUP); return false;"
+                onclick="
+                  cfGoToPage(_PAGE_MEMBER_SIGNUP);
+                  return false;
+                "
               >
                 회원가입
               </button>
@@ -221,7 +227,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(1100,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(1100, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >신발</a
                   >
@@ -230,7 +239,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(1200,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(1200, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >의류</a
                   >
@@ -239,7 +251,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(1300,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(1300, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >액세서리</a
                   >
@@ -253,7 +268,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(2100,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(2100, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >신발</a
                   >
@@ -262,7 +280,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(2200,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(2200, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >의류</a
                   >
@@ -271,7 +292,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(2300,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(2300, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >액세서리</a
                   >
@@ -285,7 +309,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(3100,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(3100, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >마라톤 110 파리</a
                   >
@@ -294,7 +321,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(3200,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(3200, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >마라톤 110</a
                   >
@@ -303,7 +333,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(3300,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(3300, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >마라톤 220</a
                   >
@@ -312,7 +345,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(3400,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(3400, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >그랜드 슬램 82</a
                   >
@@ -326,7 +362,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(5100,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(5100, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >야구</a
                   >
@@ -335,7 +374,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(5200,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(5200, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >축구</a
                   >
@@ -344,7 +386,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(5300,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(5300, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >농구</a
                   >
@@ -353,7 +398,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfCategoryItmKinds(5400,2,'','',''); return false;"
+                    onclick="
+                      cfCategoryItmKinds(5400, 2, '', '', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >기타</a
                   >
@@ -364,7 +412,10 @@
             <li>
               <a
                 href="javascript:void('0');"
-                onclick="cfGoToPage(_PAGE_SMART_FIT); return false;"
+                onclick="
+                  cfGoToPage(_PAGE_SMART_FIT);
+                  return false;
+                "
               >
                 ONE SPEC
               </a>
@@ -376,7 +427,10 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfGoToPage('/product.do?cmd=getSponsorship',''); return false;"
+                    onclick="
+                      cfGoToPage('/product.do?cmd=getSponsorship', '');
+                      return false;
+                    "
                     rel="nosublink"
                     >공식 후원</a
                   >
@@ -385,7 +439,13 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfGoToPage('/display.do?cmd=getAboutProspecs&amp;contents=First',''); return false;"
+                    onclick="
+                      cfGoToPage(
+                        '/display.do?cmd=getAboutProspecs&amp;contents=First',
+                        '',
+                      );
+                      return false;
+                    "
                     rel="nosublink"
                     >브랜드 선언</a
                   >
@@ -394,7 +454,13 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfGoToPage('/display.do?cmd=getAboutProspecs&amp;contents=Second',''); return false;"
+                    onclick="
+                      cfGoToPage(
+                        '/display.do?cmd=getAboutProspecs&amp;contents=Second',
+                        '',
+                      );
+                      return false;
+                    "
                     rel="nosublink"
                     >시즌 컬렉션</a
                   >
@@ -403,7 +469,13 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfGoToPage('/display.do?cmd=getAboutProspecs&amp;contents=Third',''); return false;"
+                    onclick="
+                      cfGoToPage(
+                        '/display.do?cmd=getAboutProspecs&amp;contents=Third',
+                        '',
+                      );
+                      return false;
+                    "
                     rel="nosublink"
                     >브랜드 가이드</a
                   >
@@ -412,7 +484,13 @@
                 <li>
                   <a
                     href="javascript:;"
-                    onclick="cfGoToPage('/planning.do?cmd=planningMain&amp;ITHR_CD=PM_001',''); return false;"
+                    onclick="
+                      cfGoToPage(
+                        '/planning.do?cmd=planningMain&amp;ITHR_CD=PM_001',
+                        '',
+                      );
+                      return false;
+                    "
                     rel="nosublink"
                     >이벤트</a
                   >
@@ -425,7 +503,10 @@
               <a
                 href="javascript:;"
                 class="font-kor"
-                onclick="cfGoToPage(_PAGE_NOTICE); return false;"
+                onclick="
+                  cfGoToPage(_PAGE_NOTICE);
+                  return false;
+                "
                 >공지사항</a
               >
             </li>
@@ -433,7 +514,10 @@
               <a
                 href="javascript:;"
                 class="font-kor"
-                onclick="cfGoToPage(_PAGE_STORE_INFO); return false;"
+                onclick="
+                  cfGoToPage(_PAGE_STORE_INFO);
+                  return false;
+                "
                 >매장안내</a
               >
             </li>
@@ -469,7 +553,12 @@
             <p class="title">로그인이 필요한 서비스입니다.</p>
             <p class="subtitle">멤버십 카드를 확인하시려면 로그인해주세요.</p>
             <div class="btn-wrap">
-              <button onclick="cfGoToPage(_PAGE_LOGIN); return false;">
+              <button
+                onclick="
+                  cfGoToPage(_PAGE_LOGIN);
+                  return false;
+                "
+              >
                 로그인
               </button>
             </div>
@@ -480,7 +569,9 @@
           name="gnbSearchForm"
           method="post"
           action="/display.do"
-          onsubmit="return jfSearchProductByGnb(document.gnbSearchForm.qt.value);"
+          onsubmit="
+            return jfSearchProductByGnb(document.gnbSearchForm.qt.value);
+          "
         >
           <div class="ps-layer-full search" data-layer-target="commonSearch">
             <div class="ps-layer-full--content">
@@ -495,9 +586,13 @@
                     type="text"
                     value=""
                     placeholder="검색어를 입력해주세요."
-                    onfocus="this.setAttribute('data-focus','focus');"
+                    onfocus="this.setAttribute('data-focus', 'focus')"
                     data-focus="focus"
-                    onkeypress="if(window.event.keyCode==13){jfSearchEvent();}"
+                    onkeypress="
+                      if (window.event.keyCode == 13) {
+                        jfSearchEvent();
+                      }
+                    "
                   />
                   <input type="hidden" name="cmd" value="getProductSearch" />
                   <input type="hidden" name="from" value="gnb" />
@@ -564,7 +659,7 @@
             // 스크롤 방향에 따라 top 값 계산 (Sticky/Fixed 기준)
             currentHeaderTop = Math.max(
               -headerHeight,
-              Math.min(0, currentHeaderTop - scrollDelta)
+              Math.min(0, currentHeaderTop - scrollDelta),
             );
             const headerCss = {
               top: currentHeaderTop + "px",
@@ -642,7 +737,7 @@
         //장바구니 상품 개수 조회 후처리
         function processAfterGetCartProductTotalCount(result) {
           $("#cart-cnt-effect").text(
-            result.CART_PROD_CNT > 0 ? result.CART_PROD_CNT : 0
+            result.CART_PROD_CNT > 0 ? result.CART_PROD_CNT : 0,
           );
         }
 
@@ -657,7 +752,7 @@
               // Logout 후처리 함수 호출
               jfProcessAfterLogout(result);
             },
-            "jsonp"
+            "jsonp",
           );
         }
 
@@ -754,7 +849,7 @@
               // Logout 후처리 함수 호출
               jfProcessGuestAfterLogout(result);
             },
-            "jsonp"
+            "jsonp",
           );
         }
 
@@ -794,7 +889,7 @@
                   $("#search-recommend-ul").append(codeHtm);
                 }
               },
-              "json"
+              "json",
             );
           }
         }
@@ -824,7 +919,7 @@
                         " " +
                         result.membershipCardinfo.MEM_CARD_NO.substring(8, 12) +
                         " " +
-                        result.membershipCardinfo.MEM_CARD_NO.substring(12, 16)
+                        result.membershipCardinfo.MEM_CARD_NO.substring(12, 16),
                     );
                     makeBarcode(result.membershipCardinfo.MEM_CARD_NO);
                     $(".popup").hide();
@@ -938,7 +1033,7 @@
                         id="EMAIL1"
                         placeholder="example"
                         value=""
-                        onblur="jfCheckEmail();"
+                        onblur="jfCheckEmail()"
                         data-gtm-form-interact-field-id="0"
                       />
                     </div>
@@ -948,7 +1043,10 @@
                         name="MAIL_DOMAIN"
                         id="MAIL_DOMAIN"
                         class="ps-select h-small"
-                        onchange="jfChangeMailDomain(this); jfCheckEmail();"
+                        onchange="
+                          jfChangeMailDomain(this);
+                          jfCheckEmail();
+                        "
                       >
                         <option value="">소속 회사 선택</option>
                         <option value="daum.net">daum.net</option>
@@ -1005,6 +1103,48 @@
     </div>
   </li>
 </ul>
+                  <ul class="ps-list type6">
+                    <li>
+                      <div class="ps-chkbox">
+                        <label for="EMAIL_YN1">
+                          <input
+                            type="radio"
+                            name="T_EMAIL_YN"
+                            id="EMAIL_YN1"
+                            value="Y"
+                            onchange="jfCheckEmail()"
+                          />
+                          <span class="text">이메일 수신동의</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="ps-chkbox">
+                        <label for="EMAIL_YN2">
+                          <input
+                            type="radio"
+                            name="T_EMAIL_YN"
+                            id="EMAIL_YN2"
+                            value="N"
+                            onchange="jfCheckEmail()"
+                          />
+                          <span class="text">이메일 수신거부</span>
+                        </label>
+                      </div>
+                    </li>
+                    <li class="btn-tip">
+                      <span class="ps-btn question">
+                        <i class="icon question"></i>
+                      </span>
+                      <div class="tip-box">
+                        이메일 수신에 동의하실 경우 프로스펙스닷컴의 다양한
+                        혜택과 세일정보를 안내받을 수 있습니다.
+                        <br />
+                        정보성 및 주문/배송 안내 내용은 수신동의 여부와 관계없이
+                        발송됩니다.
+                      </div>
+                    </li>
+                  </ul>
                 </div>
                 <!--이메일[e]-->
                 <!--비밀번호[s]-->
@@ -1018,8 +1158,8 @@
                         class="inp"
                         placeholder="영문+숫자, 혹은 영문+특수문자 등 비밀번호를 조합하여 입력해 주세요."
                         id="PASSWD"
-                        onkeyup="jfCheckPasswordLevel();"
-                        onblur="jfCheckPasswordLevel();"
+                        onkeyup="jfCheckPasswordLevel()"
+                        onblur="jfCheckPasswordLevel()"
                         data-gtm-form-interact-field-id="1"
                       />
                     </div>
@@ -1036,8 +1176,8 @@
                         class="inp"
                         placeholder="비밀번호 확인을 위해 다시 한 번 입력해 주세요."
                         id="PASSWD_CONFIRM"
-                        onkeyup="jfCheckPasswordLevel();"
-                        onblur="jfCheckPasswordLevel();"
+                        onkeyup="jfCheckPasswordLevel()"
+                        onblur="jfCheckPasswordLevel()"
                       />
                     </div>
                   </div>
@@ -1054,7 +1194,7 @@
                         readonly=""
                         class="inp"
                         maxlength="20"
-                        onblur="jfCheckName();"
+                        onblur="jfCheckName()"
                         onclick="setMessage()"
                         value="홍길동"
                       />
@@ -1072,7 +1212,7 @@
                         readonly=""
                         class="inp"
                         numberonly="true"
-                        onclick="setMessage();"
+                        onclick="setMessage()"
                         value="01012345678"
                       />
                     </div>
@@ -1086,7 +1226,7 @@
                             name="T_SMS_YN"
                             id="SMS_YN1"
                             value="Y"
-                            onchange="jfCommonMobile('SMS');"
+                            onchange="jfCommonMobile('SMS')"
                           />
                           <span class="text">SMS 수신동의</span>
                         </label>
@@ -1100,7 +1240,7 @@
                             name="T_SMS_YN"
                             id="SMS_YN2"
                             value="N"
-                            onchange="jfCommonMobile('SMS');"
+                            onchange="jfCommonMobile('SMS')"
                           />
                           <span class="text">SMS 수신거부</span>
                         </label>
@@ -1131,7 +1271,7 @@
                         readonly=""
                         class="inp"
                         numberonly="true"
-                        onclick="setMessage();"
+                        onclick="setMessage()"
                         value="19990101"
                       />
                     </div>
@@ -1160,6 +1300,37 @@
                   </div>
                 </div>
                 <!--성별[e]-->
+                <!--가입경로[s]-->
+                <div class="signUp_form_item">
+                  <h5><span>가입 경로</span></h5>
+                  <div class="signUp_form_item_box">
+                    <div class="signUp_form_item_input">
+                      <input
+                        type="text"
+                        readonly=""
+                        class="inp"
+                        value="오프라인 매장"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--가입경로[e]-->
+                <!--매장정보[s]-->
+                <div class="signUp_form_item">
+                  <h5><span>매장 정보</span></h5>
+                  <div class="signUp_form_item_box">
+                    <div class="signUp_form_item_input ty-sel">
+                      <input
+                        type="text"
+                        readonly="readonly"
+                        placeholder="매장을 선택해주세요."
+                        class="inp"
+                        value="인천복합점"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--매장정보[e]-->
                 <!--오렌지카드[s]-->
                 <div class="join-wrap">
                   <div class="orange-card-wrap">
@@ -1223,7 +1394,7 @@
                           <a
                             href="javascript:void(0)"
                             class="ps-btn type8-1 black"
-                            onclick="jfSnsLogin('NV');"
+                            onclick="jfSnsLogin('NV')"
                             >연결하기</a
                           >
                         </th>
@@ -1243,7 +1414,7 @@
                           <a
                             href="javascript:void(0)"
                             class="ps-btn type8-1 black"
-                            onclick="jfLoginKakaoSync('userInfo');"
+                            onclick="jfLoginKakaoSync('userInfo')"
                             >연결하기</a
                           >
                         </th>
@@ -1263,7 +1434,7 @@
                           <a
                             href="javascript:void(0)"
                             class="ps-btn type8-1 black"
-                            onclick="cfLoginWithFacebook();"
+                            onclick="cfLoginWithFacebook()"
                             >연결하기</a
                           >
                         </th>
@@ -1278,7 +1449,7 @@
               <a
                 href="javascript:void(0);"
                 class="ps-btn type10"
-                onclick="jfCheckSave();"
+                onclick="jfCheckSave()"
                 >회원가입 하기</a
               >
             </div>
@@ -1337,35 +1508,35 @@
                 <p>
                   <a
                     href="javascript:void(0);"
-                    onclick="cfGoToPage(_PAGE_STORE_INFO,'');"
+                    onclick="cfGoToPage(_PAGE_STORE_INFO, '')"
                     >매장안내</a
                   >
                 </p>
                 <p>
                   <a
                     href="javascript:void(0);"
-                    onclick="cfGoToPage(_PAGE_AS_GUIDE,'');"
+                    onclick="cfGoToPage(_PAGE_AS_GUIDE, '')"
                     >A/S 안내</a
                   >
                 </p>
                 <p>
                   <a
                     href="javascript:void(0);"
-                    onclick="cfGoToPage(_PAGE_CALLCENTER,'');"
+                    onclick="cfGoToPage(_PAGE_CALLCENTER, '')"
                     >고객센터</a
                   >
                 </p>
                 <p>
                   <a
                     href="javascript:void(0);"
-                    onclick="cfGoToPage(_PAGE_APP_DOWN,'');"
+                    onclick="cfGoToPage(_PAGE_APP_DOWN, '')"
                     >APP 다운로드</a
                   >
                 </p>
                 <p>
                   <a
                     href="javascript:void(0);"
-                    onclick="cfGoToPage(_PAGE_GIFT_CARD,'');"
+                    onclick="cfGoToPage(_PAGE_GIFT_CARD, '')"
                     >GIFT CARD</a
                   >
                 </p>
@@ -1377,28 +1548,28 @@
                 <p>
                   <a
                     href="javascript:void(0);"
-                    onclick="cfGoToPage(_PAGE_PRIVACY_POLICY,'');"
+                    onclick="cfGoToPage(_PAGE_PRIVACY_POLICY, '')"
                     >개인정보처리방침</a
                   >
                 </p>
                 <p>
                   <a
                     href="javascript:void(0);"
-                    onclick="cfGoToPage(_PAGE_USE_TERMS,'');"
+                    onclick="cfGoToPage(_PAGE_USE_TERMS, '')"
                     >이용약관</a
                   >
                 </p>
                 <p>
                   <a
                     href="javascript:void(0);"
-                    onclick="cfGoToPage(_PAGE_NOTICE,'');"
+                    onclick="cfGoToPage(_PAGE_NOTICE, '')"
                     >공지사항</a
                   >
                 </p>
                 <p>
                   <a
                     href="javascript:void(0);"
-                    onclick="cfGoToPage(_PAGE_PROSPECS_NEWS,'');"
+                    onclick="cfGoToPage(_PAGE_PROSPECS_NEWS, '')"
                     >뉴스</a
                   >
                 </p>
